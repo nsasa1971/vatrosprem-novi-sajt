@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'metform';
   src:
-    url('/test-export/wp-content/plugins/metform/build/assets/fonts/metform-icons/fonts/metform.ttf?eis82y') format('truetype'),
-    url('/test-export/wp-content/plugins/metform/build/assets/fonts/metform-icons/fonts/metform.woff?eis82y') format('woff'),
-    url('/test-export/wp-content/plugins/metform/build/assets/fonts/metform-icons/fonts/metform.svg?eis82y#metform') format('svg');
+    url('/vatrosprem-novi-sajt/wp-content/plugins/metform/build/assets/fonts/metform-icons/fonts/metform.ttf?eis82y') format('truetype'),
+    url('/vatrosprem-novi-sajt/wp-content/plugins/metform/build/assets/fonts/metform-icons/fonts/metform.woff?eis82y') format('woff'),
+    url('/vatrosprem-novi-sajt/wp-content/plugins/metform/build/assets/fonts/metform-icons/fonts/metform.svg?eis82y#metform') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'xs-onboard-icons';
-    src:  url('/test-export/wp-content/plugins/emailkit/Promotional/Onboard/assets/fonts/xs-onboard-icons.eot?osnmrk');
-    src:  url('/test-export/wp-content/plugins/emailkit/Promotional/Onboard/assets/fonts/xs-onboard-icons.eot?osnmrk#iefix') format('embedded-opentype'),
-      url('/test-export/wp-content/plugins/emailkit/Promotional/Onboard/assets/fonts/xs-onboard-icons.ttf?osnmrk') format('truetype'),
-      url('/test-export/wp-content/plugins/emailkit/Promotional/Onboard/assets/fonts/xs-onboard-icons.woff?osnmrk') format('woff'),
-      url('/test-export/wp-content/plugins/emailkit/Promotional/Onboard/assets/fonts/xs-onboard-icons.svg?osnmrk#xs-onboard-icons') format('svg');
+    src:  url('/vatrosprem-novi-sajt/wp-content/plugins/emailkit/Promotional/Onboard/assets/fonts/xs-onboard-icons.eot?osnmrk');
+    src:  url('/vatrosprem-novi-sajt/wp-content/plugins/emailkit/Promotional/Onboard/assets/fonts/xs-onboard-icons.eot?osnmrk#iefix') format('embedded-opentype'),
+      url('/vatrosprem-novi-sajt/wp-content/plugins/emailkit/Promotional/Onboard/assets/fonts/xs-onboard-icons.ttf?osnmrk') format('truetype'),
+      url('/vatrosprem-novi-sajt/wp-content/plugins/emailkit/Promotional/Onboard/assets/fonts/xs-onboard-icons.woff?osnmrk') format('woff'),
+      url('/vatrosprem-novi-sajt/wp-content/plugins/emailkit/Promotional/Onboard/assets/fonts/xs-onboard-icons.svg?osnmrk#xs-onboard-icons') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: block;

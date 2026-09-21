@@ -4,8 +4,8 @@
  */
 @font-face {
 	font-family: "Elusive-Icons";
-	src: url("/test-export/wp-content/plugins/redux-framework/redux-core/assets/fonts/elusiveicons-webfont.eot?v=2.0.0");
-	src: url("/test-export/wp-content/plugins/redux-framework/redux-core/assets/fonts/elusiveicons-webfont.eot#iefix&v=2.0.0") format("embedded-opentype"), url("/test-export/wp-content/plugins/redux-framework/redux-core/assets/fonts/elusiveicons-webfont.woff?v=2.0.0") format("woff"), url("/test-export/wp-content/plugins/redux-framework/redux-core/assets/fonts/elusiveicons-webfont.ttf?v=2.0.0") format("truetype"), url("/test-export/wp-content/plugins/redux-framework/redux-core/assets/fonts/elusiveicons-webfont.svg?v=2.0.0#elusiveiconsregular") format("svg");
+	src: url("/vatrosprem-novi-sajt/wp-content/plugins/redux-framework/redux-core/assets/fonts/elusiveicons-webfont.eot?v=2.0.0");
+	src: url("/vatrosprem-novi-sajt/wp-content/plugins/redux-framework/redux-core/assets/fonts/elusiveicons-webfont.eot#iefix&v=2.0.0") format("embedded-opentype"), url("/vatrosprem-novi-sajt/wp-content/plugins/redux-framework/redux-core/assets/fonts/elusiveicons-webfont.woff?v=2.0.0") format("woff"), url("/vatrosprem-novi-sajt/wp-content/plugins/redux-framework/redux-core/assets/fonts/elusiveicons-webfont.ttf?v=2.0.0") format("truetype"), url("/vatrosprem-novi-sajt/wp-content/plugins/redux-framework/redux-core/assets/fonts/elusiveicons-webfont.svg?v=2.0.0#elusiveiconsregular") format("svg");
 	font-weight: normal;
 	font-style: normal;
 }
