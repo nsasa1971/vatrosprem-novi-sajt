@@ -62,22 +62,18 @@
   #formArea, #successBox { padding-bottom: 40px; }
 
   .brand {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "logo text back";
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
     gap: 12px;
     padding-bottom: 18px;
     margin-bottom: 22px;
     border-bottom: 3px solid var(--red);
   }
-  .brand-id {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .brand-id a { display: flex; }
+  .brand-logo-link { grid-area: logo; display: flex; }
   .brand-logo { height: 44px; width: auto; flex: none; }
+  .brand-text { grid-area: text; text-align: center; }
   .brand-text h1 {
     margin: 0;
     font-size: 15px;
@@ -87,6 +83,8 @@
   }
   .brand-text p { margin: 2px 0 0; font-size: 12px; color: var(--ink-soft); }
   .brand-back {
+    grid-area: back;
+    justify-self: end;
     font-size: 12.5px;
     color: var(--ink-soft);
     text-decoration: none;
@@ -96,6 +94,16 @@
     white-space: nowrap;
   }
   .brand-back:hover { border-color: var(--red); color: var(--red); }
+  @media (max-width: 560px) {
+    .brand {
+      grid-template-columns: auto auto;
+      grid-template-areas:
+        "logo back"
+        "text text";
+      row-gap: 10px;
+    }
+    .brand-back { justify-self: end; }
+  }
 
   h2.page-title {
     font-size: 22px;
@@ -367,14 +375,12 @@
 
 <div class="wrap" id="formArea">
   <div class="brand">
-    <div class="brand-id">
-      <a href="/" aria-label="Vatrosprem Inovacije — početna">
-        <img class="brand-logo" src="/wp-content/uploads/2020/04/VATROSPREM-INOVACIJE-memo-vertical.png" alt="Vatrosprem Inovacije">
-      </a>
-      <div class="brand-text">
-        <h1>Vatrosprem Inovacije</h1>
-        <p>Projektovanje, ugradnja i servis sistema zaštite od požara</p>
-      </div>
+    <a class="brand-logo-link" href="/" aria-label="Vatrosprem Inovacije — početna">
+      <img class="brand-logo" src="/wp-content/uploads/2020/04/VATROSPREM-INOVACIJE-memo-vertical.png" alt="Vatrosprem Inovacije">
+    </a>
+    <div class="brand-text">
+      <h1>Vatrosprem Inovacije</h1>
+      <p>Projektovanje, ugradnja i servis sistema zaštite od požara</p>
     </div>
     <a class="brand-back" href="/">← Nazad na sajt</a>
   </div>
