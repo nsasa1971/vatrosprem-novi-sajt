@@ -1,0 +1,26 @@
+.elementor-row{
+	flex-wrap: wrap;
+}
+/*Fix Elementor Update*/
+.elementor-progress-wrapper {
+	position: relative;
+	background-color: #eee;
+	color: #fff;
+	height: 100%;
+	border-radius: 2px;
+}
+.elementor-progress-bar {
+	display: flex;
+	background-color: #69727d;
+	width: 0;
+	font-size: 11px;
+	height: 30px;
+	line-height: 30px;
+	border-radius: 2px;
+	transition: width 1s ease-in-out;
+}
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: inherit;
+	}
+}

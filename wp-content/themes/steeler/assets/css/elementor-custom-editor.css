@@ -1,0 +1,17 @@
+/*Custom panel Elementor*/
+#elementor-panel-categories{
+	display: flex;
+	flex-direction: column;
+}
+#elementor-panel-categories #elementor-panel-category-liquid-custom-bulder{
+	order: -1;
+}
+#elementor-panel-get-pro-elements, #elementor-panel-category-pro-elements {
+	display: none !important;
+}
+.select2-container--default .select2-selection--multiple .select2-selection__rendered li{
+	min-width: 123px;
+}
+.elementor-icons-manager__tab__item__icon{
+	font-size: 25px !important;
+}
