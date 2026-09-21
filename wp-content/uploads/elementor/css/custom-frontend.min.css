@@ -9,3 +9,18 @@
   margin-left: -50vw;
   margin-right: -50vw;
 }
+/* CUSTOM: full-bleed override for page-title/hero banners (gasenje-gasom, gasenje-penom, splinker-sistemi, partners-clients, kontakt, o-nama, nase-usluge, project-masonry, service/pp-aparati-i-hidrantska-oprema, service/stabilne-instalacije-za-gasenje-i-dojavu-pozara) */
+.elementor-element-353ec7a6.elementor-section-boxed > .elementor-container,
+.elementor-element-3ce9b522.elementor-section-boxed > .elementor-container,
+.elementor-element-5b44c929.elementor-section-boxed > .elementor-container,
+.elementor-element-649372d1.elementor-section-boxed > .elementor-container,
+.elementor-element-4ab48c62.elementor-section-boxed > .elementor-container,
+.elementor-element-6df09464.elementor-section-boxed > .elementor-container {
+  max-width: 100% !important;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
