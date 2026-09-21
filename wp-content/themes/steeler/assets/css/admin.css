@@ -104,7 +104,7 @@
 	color: #ff4a17;
 }
 .vc_el-container [id*='cms_'] .vc_element-icon, .vc_el-container [id^='cms_'] .vc_element-icon {
-	background-image: url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/images/el-icon.png');
+	background-image: url('/wp-content/themes/steeler/assets/images/el-icon.png');
 	background-color: transparent;
 	background-position: center;
 }

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('/vatrosprem-novi-sajt/wp-content/plugins/metform/build/assets/fonts/mf-icon/fonts/icomoon.eot?166jp8');
-  src:  url('/vatrosprem-novi-sajt/wp-content/plugins/metform/build/assets/fonts/mf-icon/fonts/icomoon.eot?166jp8#iefix') format('embedded-opentype'),
-    url('/vatrosprem-novi-sajt/wp-content/plugins/metform/build/assets/fonts/mf-icon/fonts/icomoon.ttf?166jp8') format('truetype'),
-    url('/vatrosprem-novi-sajt/wp-content/plugins/metform/build/assets/fonts/mf-icon/fonts/icomoon.woff?166jp8') format('woff'),
-    url('/vatrosprem-novi-sajt/wp-content/plugins/metform/build/assets/fonts/mf-icon/fonts/icomoon.svg?166jp8#icomoon') format('svg');
+  src:  url('/wp-content/plugins/metform/build/assets/fonts/mf-icon/fonts/icomoon.eot?166jp8');
+  src:  url('/wp-content/plugins/metform/build/assets/fonts/mf-icon/fonts/icomoon.eot?166jp8#iefix') format('embedded-opentype'),
+    url('/wp-content/plugins/metform/build/assets/fonts/mf-icon/fonts/icomoon.ttf?166jp8') format('truetype'),
+    url('/wp-content/plugins/metform/build/assets/fonts/mf-icon/fonts/icomoon.woff?166jp8') format('woff'),
+    url('/wp-content/plugins/metform/build/assets/fonts/mf-icon/fonts/icomoon.svg?166jp8#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
