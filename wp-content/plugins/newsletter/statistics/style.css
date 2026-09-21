@@ -213,27 +213,27 @@
 }
 
 .tnp-card-icon-remove {
-    background-image: url('/vatrosprem-novi-sajt/wp-content/plugins/newsletter/statistics/images/remove.svg');
+    background-image: url('/wp-content/plugins/newsletter/statistics/images/remove.svg');
 }
 
 .tnp-card-icon-filter-remove {
-    /*background-image: url('/vatrosprem-novi-sajt/wp-content/plugins/newsletter/statistics/images/filter-remove.svg');*/
+    /*background-image: url('/wp-content/plugins/newsletter/statistics/images/filter-remove.svg');*/
 }
 
 .tnp-card-icon-mouse {
-    background-image: url('/vatrosprem-novi-sajt/wp-content/plugins/newsletter/statistics/images/mouse-animated.svg');
+    background-image: url('/wp-content/plugins/newsletter/statistics/images/mouse-animated.svg');
 }
 
 .tnp-card-icon-business-contact {
-    /*background-image: url('/vatrosprem-novi-sajt/wp-content/plugins/newsletter/statistics/images/business-contact-85.svg');*/
+    /*background-image: url('/wp-content/plugins/newsletter/statistics/images/business-contact-85.svg');*/
 }
 
 .tnp-card-icon-preview {
-    /*background-image: url('/vatrosprem-novi-sajt/wp-content/plugins/newsletter/statistics/images/preview.svg');*/
+    /*background-image: url('/wp-content/plugins/newsletter/statistics/images/preview.svg');*/
 }
 
 .tnp-card-icon-rabbit {
-    /*background-image: url('/vatrosprem-novi-sajt/wp-content/plugins/newsletter/statistics/images/rabbit.svg');*/
+    /*background-image: url('/wp-content/plugins/newsletter/statistics/images/rabbit.svg');*/
 }
 
 /* Fix for third party plugins */

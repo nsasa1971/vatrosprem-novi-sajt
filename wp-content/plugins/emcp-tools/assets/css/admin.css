@@ -13,7 +13,7 @@
 
 @font-face {
 	font-family: "Geist";
-	src: url("/vatrosprem-novi-sajt/wp-content/plugins/emcp-tools/assets/fonts/Geist-Variable.woff2") format("woff2");
+	src: url("/wp-content/plugins/emcp-tools/assets/fonts/Geist-Variable.woff2") format("woff2");
 	font-weight: 100 900;
 	font-style: normal;
 	font-display: swap;

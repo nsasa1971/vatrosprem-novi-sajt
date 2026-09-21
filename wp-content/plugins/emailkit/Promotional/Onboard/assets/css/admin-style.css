@@ -1328,7 +1328,7 @@ body.toplevel_page_elementskit {
 
 .emailkit-admin-video-tutorial-list .tutorial-thumb::before {
 	content: "";
-	background-image: url(/vatrosprem-novi-sajt/wp-content/plugins/emailkit/Promotional/Onboard/assets/images/video-icon.png);
+	background-image: url(/wp-content/plugins/emailkit/Promotional/Onboard/assets/images/video-icon.png);
 	display: inline-block;
 	height: 30px;
 	width: 30px;
@@ -1432,7 +1432,7 @@ body.toplevel_page_elementskit {
 
 #v-elementskit-userdata::before {
 	content: "";
-	background-image: url(/vatrosprem-novi-sajt/wp-content/plugins/emailkit/Promotional/Onboard/assets/images/user-data-thumb.png);
+	background-image: url(/wp-content/plugins/emailkit/Promotional/Onboard/assets/images/user-data-thumb.png);
 	position: absolute;
 	display: block;
 	bottom: 0;
@@ -2615,7 +2615,7 @@ body.toplevel_page_elementskit {
 
 .emailkit-onboard-dashboard .emailkit-onboard-step-02:before {
 	content: "";
-	background-image: url(/vatrosprem-novi-sajt/wp-content/plugins/emailkit/Promotional/Onboard/assets/images/shape-08.png);
+	background-image: url(/wp-content/plugins/emailkit/Promotional/Onboard/assets/images/shape-08.png);
 	height: 110px;
 	width: 105px;
 	display: block;
@@ -2917,7 +2917,7 @@ body.toplevel_page_elementskit {
 
 .emailkit-onboard-dashboard .emailkit-onboard-tutorial {
 	text-align: center;
-	background-image: url(/vatrosprem-novi-sajt/wp-content/plugins/emailkit/Promotional/Onboard/assets/images/tutorial-banner.png);
+	background-image: url(/wp-content/plugins/emailkit/Promotional/Onboard/assets/images/tutorial-banner.png);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -3131,7 +3131,7 @@ body.toplevel_page_elementskit {
 
 .emailkit-onboard-dashboard .emailkit-onboard-pro-features h2 span:before {
 	content: "";
-	background-image: url(/vatrosprem-novi-sajt/wp-content/plugins/emailkit/Promotional/Onboard/assets/images/pro-line-shape.png);
+	background-image: url(/wp-content/plugins/emailkit/Promotional/Onboard/assets/images/pro-line-shape.png);
 	width: 64px;
 	height: 44px;
 	display: block;
