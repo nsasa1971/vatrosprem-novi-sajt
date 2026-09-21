@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zahtev za usluge kontrolisanja — Vatrosprem Inovacije</title>
+<style>
+  :root {
+    --ink: #1b1e22;
+    --ink-soft: #454b52;
+    --paper: #ffffff;
+    --bg: #f3f4f6;
+    --line: #dcdfe3;
+    --red: #b3121b;
+    --red-dark: #8c0d14;
+    --red-tint: #fbeceb;
+    --ok: #1c7a3d;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #eef0f2;
+      --ink-soft: #b7bcc3;
+      --paper: #202327;
+      --bg: #16181b;
+      --line: #33373d;
+      --red: #e2555c;
+      --red-dark: #ff7278;
+      --red-tint: #34191b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #eef0f2;
+    --ink-soft: #b7bcc3;
+    --paper: #202327;
+    --bg: #16181b;
+    --line: #33373d;
+    --red: #e2555c;
+    --red-dark: #ff7278;
+    --red-tint: #34191b;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  html, body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body { padding: 24px 16px 60px; }
+
+  .wrap { max-width: 760px; margin: 0 auto; }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+  }
+  .brand-mark {
+    width: 40px; height: 40px;
+    border-radius: 8px;
+    background: var(--red);
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex: none;
+  }
+  .brand-text h1 {
+    margin: 0;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+  .brand-text p { margin: 2px 0 0; font-size: 12px; color: var(--ink-soft); }
+
+  h2.page-title {
+    font-size: 22px;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .page-sub {
+    color: var(--ink-soft);
+    font-size: 13.5px;
+    line-height: 1.5;
+    margin: 0 0 28px;
+  }
+
+  .card {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 18px;
+  }
+  .card h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--red);
+    margin: 0 0 16px;
+  }
+  .card h3 .num {
+    width: 22px; height: 22px;
+    border-radius: 50%;
+    background: var(--red-tint);
+    color: var(--red);
+    font-size: 12px;
+    display: flex; align-items: center; justify-content: center;
+    flex: none;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .grid .full { grid-column: 1 / -1; }
+  @media (max-width: 480px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+
+  label {
+    display: block;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    margin-bottom: 5px;
+  }
+  label .req { color: var(--red); }
+  input[type=text], input[type=tel], input[type=email], input[type=number], input[type=date] {
+    width: 100%;
+    padding: 10px 11px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 14.5px;
+    font-family: inherit;
+  }
+  input:focus { outline: 2px solid var(--red); outline-offset: 0; }
+  .field { margin-bottom: 0; }
+
+  .service {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    transition: border-color .15s, background .15s;
+  }
+  .service.active {
+    border-color: var(--red);
+    background: var(--red-tint);
+  }
+  .service-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+  }
+  .service-head input[type=checkbox] {
+    width: 19px; height: 19px;
+    margin-top: 2px;
+    accent-color: var(--red);
+    flex: none;
+  }
+  .service-oznaka {
+    flex: none;
+    width: 24px; height: 24px;
+    border-radius: 6px;
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 12px;
+    font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: 1px;
+  }
+  .service-text { font-size: 13.5px; line-height: 1.4; }
+  .service-sub { color: var(--ink-soft); font-size: 12px; margin-top: 1px; }
+
+  .qty-row {
+    display: none;
+    gap: 10px;
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--line);
+    flex-wrap: wrap;
+  }
+  .service.active .qty-row { display: flex; }
+  .qty-field { flex: 1; min-width: 110px; }
+  .qty-field label { font-size: 11.5px; margin-bottom: 4px; }
+
+  .consent {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+  }
+  .consent input { width: 19px; height: 19px; margin-top: 2px; accent-color: var(--red); flex: none; }
+  .note {
+    font-size: 12px;
+    color: var(--ink-soft);
+    background: var(--bg);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-top: 12px;
+    line-height: 1.5;
+  }
+
+  .sig-line {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 16px;
+    flex-wrap: wrap;
+  }
+  .sig-field { flex: 1; min-width: 200px; }
+
+  .actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 22px;
+    flex-wrap: wrap;
+  }
+  button {
+    font-family: inherit;
+    font-size: 14.5px;
+    font-weight: 600;
+    padding: 13px 20px;
+    border-radius: 9px;
+    border: none;
+    cursor: pointer;
+  }
+  #submitBtn {
+    background: var(--red);
+    color: #fff;
+    flex: 1;
+    min-width: 200px;
+  }
+  #submitBtn:disabled { background: var(--line); color: var(--ink-soft); cursor: not-allowed; }
+  #submitBtn:not(:disabled):active { background: var(--red-dark); }
+  #resetBtn {
+    background: transparent;
+    color: var(--ink-soft);
+    border: 1px solid var(--line);
+  }
+
+  .err {
+    color: var(--red);
+    font-size: 12px;
+    margin-top: 4px;
+    display: none;
+  }
+  .invalid { border-color: var(--red) !important; }
+
+  #successBox {
+    display: none;
+    background: var(--paper);
+    border: 1px solid var(--ok);
+    border-radius: 12px;
+    padding: 22px;
+    text-align: center;
+  }
+  #successBox .ok-icon {
+    width: 46px; height: 46px;
+    border-radius: 50%;
+    background: var(--ok);
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    margin: 0 auto 12px;
+  }
+  #successBox h3 { margin: 0 0 6px; font-size: 17px; }
+  #successBox p { margin: 0 0 18px; color: var(--ink-soft); font-size: 13.5px; line-height: 1.5; }
+  #successBox .actions { justify-content: center; }
+  #successBox button { min-width: 160px; flex: none; }
+
+  #printArea { display: none; }
+
+  @media print {
+    body * { visibility: hidden; }
+    #printArea, #printArea * { visibility: visible; }
+    #printArea {
+      display: block;
+      position: absolute; left: 0; top: 0; width: 100%;
+      padding: 0;
+      color: #111;
+    }
+    .p-header { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 3px solid #b3121b; padding-bottom: 10px; margin-bottom: 18px; }
+    .p-header h1 { font-size: 16px; margin: 0; }
+    .p-header .p-sub { font-size: 10px; color: #555; margin-top: 2px; }
+    .p-section { margin-bottom: 16px; }
+    .p-section h4 { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: #b3121b; border-bottom: 1px solid #ccc; padding-bottom: 4px; margin: 0 0 8px; }
+    .p-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; font-size: 12px; }
+    .p-grid div span { display: block; font-size: 9px; color: #777; text-transform: uppercase; letter-spacing: .03em; }
+    table.p-table { width: 100%; border-collapse: collapse; font-size: 11px; }
+    table.p-table th, table.p-table td { border: 1px solid #ccc; padding: 5px 7px; text-align: left; }
+    table.p-table th { background: #f2f2f2; }
+    .p-footer { margin-top: 30px; display: flex; justify-content: space-between; font-size: 12px; }
+    .p-footer .line { border-top: 1px solid #333; width: 220px; text-align: center; padding-top: 4px; margin-top: 40px; }
+    .p-note { font-size: 9.5px; color: #666; margin-top: 20px; line-height: 1.5; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap" id="formArea">
+  <div class="brand">
+    <div class="brand-mark">🧯</div>
+    <div class="brand-text">
+      <h1>Vatrosprem Inovacije</h1>
+      <p>Projektovanje, ugradnja i servis sistema zaštite od požara</p>
+    </div>
+  </div>
+
+  <h2 class="page-title">Zahtev za usluge kontrolisanja</h2>
+  <p class="page-sub">Popunite obrazac da biste zatražili kontrolisanje hidrantske mreže i/ili mobilnih uređaja i instalacija za gašenje požara. Konačnu prihvatljivost zahteva i usklađenost sa obimom akreditacije proverava kontrolno telo.</p>
+
+  <!-- 1. PODACI O KORISNIKU -->
+  <div class="card">
+    <h3><span class="num">1</span>Podaci o korisniku</h3>
+    <div class="grid">
+      <div class="field full">
+        <label>Naziv korisnika / pravno lice <span class="req">*</span></label>
+        <input type="text" id="korisnikNaziv" required>
+        <div class="err">Ovo polje je obavezno.</div>
+      </div>
+      <div class="field">
+        <label>PIB / matični broj (po potrebi)</label>
+        <input type="text" id="korisnikPib">
+      </div>
+      <div class="field">
+        <label>Kontakt osoba <span class="req">*</span></label>
+        <input type="text" id="kontaktOsoba" required>
+        <div class="err">Ovo polje je obavezno.</div>
+      </div>
+      <div class="field full">
+        <label>Adresa korisnika <span class="req">*</span></label>
+        <input type="text" id="korisnikAdresa" required>
+        <div class="err">Ovo polje je obavezno.</div>
+      </div>
+      <div class="field">
+        <label>Telefon <span class="req">*</span></label>
+        <input type="tel" id="telefon" required>
+        <div class="err">Ovo polje je obavezno.</div>
+      </div>
+      <div class="field">
+        <label>E-mail <span class="req">*</span></label>
+        <input type="email" id="email" required>
+        <div class="err">Unesite ispravnu e-mail adresu.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. PODACI O OBJEKTU -->
+  <div class="card">
+    <h3><span class="num">2</span>Podaci o objektu / lokaciji kontrolisanja</h3>
+    <div class="grid">
+      <div class="field full">
+        <label>Naziv objekta <span class="req">*</span></label>
+        <input type="text" id="objekatNaziv" required>
+        <div class="err">Ovo polje je obavezno.</div>
+      </div>
+      <div class="field full">
+        <label>Adresa objekta <span class="req">*</span></label>
+        <input type="text" id="objekatAdresa" required>
+        <div class="err">Ovo polje je obavezno.</div>
+      </div>
+      <div class="field full">
+        <label>Lokacija / deo objekta</label>
+        <input type="text" id="objekatLokacija" placeholder="npr. podrum, magacin, proizvodna hala...">
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. VRSTA USLUGE -->
+  <div class="card">
+    <h3><span class="num">3</span>Vrsta zahtevane usluge</h3>
+    <div class="page-sub" style="margin-bottom:16px;">Izaberite jednu ili više usluga. Za izabrane stavke unesite tražene količine.</div>
+
+    <div class="service" data-code="A">
+      <div class="service-head">
+        <input type="checkbox" class="svc-check">
+        <div class="service-oznaka">A</div>
+        <div>
+          <div class="service-text">Kontrolisanje instalacija hidrantske mreže za gašenje požara — prvo kontrolisanje</div>
+        </div>
+      </div>
+      <div class="qty-row">
+        <div class="qty-field"><label>Spoljni hidranti (kom)</label><input type="number" min="0" class="qty" data-key="spoljni"></div>
+        <div class="qty-field"><label>Unutrašnji hidranti (kom)</label><input type="number" min="0" class="qty" data-key="unutrasnji"></div>
+      </div>
+    </div>
+
+    <div class="service" data-code="B">
+      <div class="service-head">
+        <input type="checkbox" class="svc-check">
+        <div class="service-oznaka">B</div>
+        <div>
+          <div class="service-text">Kontrolisanje instalacija hidrantske mreže za gašenje požara — periodično kontrolisanje</div>
+        </div>
+      </div>
+      <div class="qty-row">
+        <div class="qty-field"><label>Spoljni hidranti (kom)</label><input type="number" min="0" class="qty" data-key="spoljni"></div>
+        <div class="qty-field"><label>Unutrašnji hidranti (kom)</label><input type="number" min="0" class="qty" data-key="unutrasnji"></div>
+      </div>
+    </div>
+
+    <div class="service" data-code="C">
+      <div class="service-head">
+        <input type="checkbox" class="svc-check">
+        <div class="service-oznaka">C</div>
+        <div>
+          <div class="service-text">Kontrolisanje mobilnih uređaja za gašenje požara — periodično kontrolisanje</div>
+          <div class="service-sub">S, SA i CO₂ aparati</div>
+        </div>
+      </div>
+      <div class="qty-row">
+        <div class="qty-field"><label>S aparati (kom)</label><input type="number" min="0" class="qty" data-key="s"></div>
+        <div class="qty-field"><label>SA aparati (kom)</label><input type="number" min="0" class="qty" data-key="sa"></div>
+        <div class="qty-field"><label>CO₂ aparati (kom)</label><input type="number" min="0" class="qty" data-key="co2"></div>
+      </div>
+    </div>
+
+    <div class="service" data-code="D">
+      <div class="service-head">
+        <input type="checkbox" class="svc-check">
+        <div class="service-oznaka">D</div>
+        <div>
+          <div class="service-text">Kontrolisanje mobilnih uređaja za gašenje požara — kontrolno ispitivanje</div>
+          <div class="service-sub">S, SA i CO₂ aparati</div>
+        </div>
+      </div>
+      <div class="qty-row">
+        <div class="qty-field"><label>S aparati (kom)</label><input type="number" min="0" class="qty" data-key="s"></div>
+        <div class="qty-field"><label>SA aparati (kom)</label><input type="number" min="0" class="qty" data-key="sa"></div>
+        <div class="qty-field"><label>CO₂ aparati (kom)</label><input type="number" min="0" class="qty" data-key="co2"></div>
+      </div>
+    </div>
+
+    <div class="service" data-code="E">
+      <div class="service-head">
+        <input type="checkbox" class="svc-check">
+        <div class="service-oznaka">E</div>
+        <div>
+          <div class="service-text">Kontrolisanje instalacija i uređaja za gašenje požara — prvo kontrolisanje</div>
+          <div class="service-sub">Voda / Pena</div>
+        </div>
+      </div>
+      <div class="qty-row">
+        <div class="qty-field"><label>Voda — instalacije (kom)</label><input type="number" min="0" class="qty" data-key="voda"></div>
+        <div class="qty-field"><label>Pena — instalacije (kom)</label><input type="number" min="0" class="qty" data-key="pena"></div>
+      </div>
+    </div>
+
+    <div class="service" data-code="F">
+      <div class="service-head">
+        <input type="checkbox" class="svc-check">
+        <div class="service-oznaka">F</div>
+        <div>
+          <div class="service-text">Kontrolisanje instalacija i uređaja za gašenje požara — periodično kontrolisanje</div>
+          <div class="service-sub">Voda / Pena</div>
+        </div>
+      </div>
+      <div class="qty-row">
+        <div class="qty-field"><label>Voda — instalacije (kom)</label><input type="number" min="0" class="qty" data-key="voda"></div>
+        <div class="qty-field"><label>Pena — instalacije (kom)</label><input type="number" min="0" class="qty" data-key="pena"></div>
+      </div>
+    </div>
+
+    <div class="err" id="svcErr" style="margin-top:8px;">Izaberite bar jednu uslugu.</div>
+  </div>
+
+  <!-- 4. SAGLASNOST -->
+  <div class="card">
+    <h3><span class="num">4</span>Saglasnost i izjava korisnika</h3>
+    <label class="consent">
+      <input type="checkbox" id="consentCheck" required>
+      <span>Slanjem ovog zahteva potvrđujem da su navedeni podaci, prema mom saznanju, tačni i potpuni i da je zahtev podnet radi dobijanja usluge kontrolisanja. Saglasan/na sam da me kontrolno telo kontaktira radi dopune ili razjašnjenja zahteva.</span>
+    </label>
+    <div class="err" id="consentErr">Saglasnost je obavezna za slanje zahteva.</div>
+    <div class="note">Napomena: Podnošenje zahteva ne predstavlja automatsko prihvatanje zahteva. Kontrolno telo, pre prihvatanja zahteva, sprovodi evidentiranje i preispitivanje zahteva, uključujući proveru da li je zahtev dovoljno specifikovan, da li je predmet u okviru obima akreditacije i da li postoje okolnosti koje mogu predstavljati sukob interesa.</div>
+
+    <div class="sig-line">
+      <div class="sig-field">
+        <label>Datum</label>
+        <input type="date" id="datum">
+      </div>
+      <div class="sig-field">
+        <label>Podnosilac zahteva (ime i prezime)</label>
+        <input type="text" id="podnosilac" placeholder="Ime i prezime">
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button id="submitBtn" disabled>Pošalji zahtev</button>
+    <button id="resetBtn" type="button">Obriši obrazac</button>
+  </div>
+</div>
+
+<div class="wrap" id="successBox">
+  <div class="ok-icon">✓</div>
+  <h3 id="successTitle">Zahtev je pripremljen</h3>
+  <p id="autoSentMsg" style="display:none;">Zahtev je automatski poslat na <strong>boban.inovacije@gmail.com</strong>. Konačno prihvatanje zahteva potvrđuje kontrolno telo nakon pregleda. Možete i da sačuvate PDF kopiju za svoju evidenciju.</p>
+  <p id="manualMsg" style="display:block;">Obrazac je popunjen ispravno, ali automatsko slanje trenutno nije dostupno (ovo je pregled — na pravom hostingu će raditi automatski). Sačuvajte ga kao PDF ili ga pošaljite putem e-pošte na <strong>boban.inovacije@gmail.com</strong>.</p>
+  <div class="actions">
+    <button id="pdfBtn">Sačuvaj kao PDF</button>
+    <button id="mailBtn" style="background:transparent;color:var(--red);border:1px solid var(--red);">Pošalji e-mailom</button>
+  </div>
+  <div class="actions">
+    <button id="backBtn" style="background:transparent;color:var(--ink-soft);border:1px solid var(--line);flex:1;">← Nazad na izmenu obrasca</button>
+  </div>
+</div>
+
+<!-- Skriveni layout koji se koristi samo za štampu/PDF -->
+<div id="printArea">
+  <div class="p-header">
+    <div>
+      <h1>Vatrosprem Inovacije — Zahtev za usluge kontrolisanja</h1>
+      <div class="p-sub">Generisano putem online obrasca</div>
+    </div>
+    <div class="p-sub" id="pDate"></div>
+  </div>
+
+  <div class="p-section">
+    <h4>1. Podaci o korisniku</h4>
+    <div class="p-grid" id="pKorisnik"></div>
+  </div>
+
+  <div class="p-section">
+    <h4>2. Podaci o objektu / lokaciji kontrolisanja</h4>
+    <div class="p-grid" id="pObjekat"></div>
+  </div>
+
+  <div class="p-section">
+    <h4>3. Vrsta zahtevane usluge</h4>
+    <table class="p-table" id="pUsluge">
+      <thead><tr><th>Oznaka</th><th>Usluga</th><th>Količine</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="p-section">
+    <h4>4. Saglasnost i izjava korisnika</h4>
+    <div style="font-size:11px;line-height:1.5;">Korisnik potvrđuje da su navedeni podaci, prema njegovom saznanju, tačni i potpuni i da je zahtev podnet radi dobijanja usluge kontrolisanja. Korisnik je saglasan da ga kontrolno telo kontaktira radi dopune ili razjašnjenja zahteva.</div>
+  </div>
+
+  <div class="p-footer">
+    <div>Datum: <span id="pDatumVal"></span></div>
+    <div class="line" id="pPotpis">Podnosilac zahteva</div>
+  </div>
+
+  <div class="p-note">Napomena: Podnošenje zahteva ne predstavlja automatsko prihvatanje zahteva. Kontrolno telo, pre prihvatanja zahteva, sprovodi evidentiranje i preispitivanje zahteva, uključujući proveru da li je zahtev dovoljno specifikovan, da li je predmet u okviru obima akreditacije i da li postoje okolnosti koje mogu predstavljati sukob interesa.</div>
+</div>
+
+<script>
+(function(){
+  var services = document.querySelectorAll('.service');
+  var submitBtn = document.getElementById('submitBtn');
+  var svcErr = document.getElementById('svcErr');
+  var consentCheck = document.getElementById('consentCheck');
+  var consentErr = document.getElementById('consentErr');
+
+  // Podrazumevani datum = danas
+  var dEl = document.getElementById('datum');
+  var today = new Date();
+  dEl.value = today.toISOString().slice(0,10);
+
+  services.forEach(function(s){
+    var chk = s.querySelector('.svc-check');
+    chk.addEventListener('change', function(){
+      s.classList.toggle('active', chk.checked);
+      validate();
+    });
+  });
+
+  var requiredInputs = document.querySelectorAll('#formArea input[required]');
+  requiredInputs.forEach(function(inp){
+    inp.addEventListener('input', validate);
+  });
+  consentCheck.addEventListener('change', validate);
+
+  function anyServiceChecked(){
+    return Array.from(document.querySelectorAll('.svc-check')).some(function(c){ return c.checked; });
+  }
+
+  function validate(){
+    var ok = true;
+    requiredInputs.forEach(function(inp){
+      var valid = inp.value.trim() !== '';
+      if (inp.type === 'email' && valid) {
+        valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inp.value.trim());
+      }
+      if (!valid) ok = false;
+    });
+    if (!anyServiceChecked()) ok = false;
+    if (!consentCheck.checked) ok = false;
+    submitBtn.disabled = !ok;
+    return ok;
+  }
+
+  function showErrors(){
+    requiredInputs.forEach(function(inp){
+      var errBox = inp.parentElement.querySelector('.err');
+      var valid = inp.value.trim() !== '';
+      if (inp.type === 'email' && valid) {
+        valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inp.value.trim());
+      }
+      if (errBox) errBox.style.display = valid ? 'none' : 'block';
+      inp.classList.toggle('invalid', !valid);
+    });
+    svcErr.style.display = anyServiceChecked() ? 'none' : 'block';
+    consentErr.style.display = consentCheck.checked ? 'none' : 'block';
+  }
+
+  document.getElementById('resetBtn').addEventListener('click', function(){
+    if (confirm('Da li ste sigurni da želite da obrišete sve unete podatke?')) {
+      document.querySelectorAll('#formArea input[type=text], #formArea input[type=tel], #formArea input[type=email], #formArea input[type=number]').forEach(function(i){ i.value=''; });
+      document.querySelectorAll('.svc-check').forEach(function(c){ c.checked=false; c.dispatchEvent(new Event('change')); });
+      consentCheck.checked = false;
+      dEl.value = today.toISOString().slice(0,10);
+      document.getElementById('podnosilac').value = '';
+      validate();
+    }
+  });
+
+  function val(id){ return document.getElementById(id).value.trim(); }
+
+  function buildPrintView(){
+    document.getElementById('pDate').textContent = 'Datum izrade: ' + new Date().toLocaleDateString('sr-RS');
+
+    document.getElementById('pKorisnik').innerHTML =
+      field('Naziv korisnika', val('korisnikNaziv')) +
+      field('PIB / matični broj', val('korisnikPib') || '—') +
+      field('Adresa korisnika', val('korisnikAdresa')) +
+      field('Kontakt osoba', val('kontaktOsoba')) +
+      field('Telefon', val('telefon')) +
+      field('E-mail', val('email'));
+
+    document.getElementById('pObjekat').innerHTML =
+      field('Naziv objekta', val('objekatNaziv')) +
+      field('Adresa objekta', val('objekatAdresa')) +
+      field('Lokacija / deo objekta', val('objekatLokacija') || '—');
+
+    var tbody = document.querySelector('#pUsluge tbody');
+    tbody.innerHTML = '';
+    services.forEach(function(s){
+      var chk = s.querySelector('.svc-check');
+      if (!chk.checked) return;
+      var code = s.getAttribute('data-code');
+      var text = s.querySelector('.service-text').textContent;
+      var qtys = Array.from(s.querySelectorAll('.qty')).map(function(q){
+        var label = q.parentElement.querySelector('label').textContent;
+        var v = q.value.trim();
+        return v ? (label + ': ' + v) : null;
+      }).filter(Boolean).join(' · ');
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td>' + code + '</td><td>' + text + '</td><td>' + (qtys || '—') + '</td>';
+      tbody.appendChild(tr);
+    });
+
+    var dVal = dEl.value ? new Date(dEl.value).toLocaleDateString('sr-RS') : '—';
+    document.getElementById('pDatumVal').textContent = dVal;
+    var potpisnik = val('podnosilac');
+    document.getElementById('pPotpis').textContent = potpisnik ? potpisnik : 'Podnosilac zahteva';
+  }
+
+  function field(label, value){
+    return '<div><span>' + label + '</span>' + escapeHtml(value) + '</div>';
+  }
+  function escapeHtml(str){
+    var d = document.createElement('div');
+    d.textContent = str;
+    return d.innerHTML;
+  }
+
+  var SEND_ENDPOINT = 'send-zahtev.php'; // relativna putanja — radi kada je stranica na vatrospremdoo.rs hostingu
+  var sendStatus = document.getElementById('sendStatus');
+
+  function collectPayload(){
+    var usluge = [];
+    services.forEach(function(s){
+      var chk = s.querySelector('.svc-check');
+      if (!chk.checked) return;
+      var q = {};
+      s.querySelectorAll('.qty').forEach(function(inp){
+        if (inp.value.trim() !== '') q[inp.dataset.key] = inp.value.trim();
+      });
+      usluge.push({ oznaka: s.getAttribute('data-code'), opis: s.querySelector('.service-text').textContent, kolicine: q });
+    });
+    return {
+      korisnikNaziv: val('korisnikNaziv'),
+      korisnikPib: val('korisnikPib'),
+      korisnikAdresa: val('korisnikAdresa'),
+      kontaktOsoba: val('kontaktOsoba'),
+      telefon: val('telefon'),
+      email: val('email'),
+      objekatNaziv: val('objekatNaziv'),
+      objekatAdresa: val('objekatAdresa'),
+      objekatLokacija: val('objekatLokacija'),
+      usluge: usluge,
+      datum: dEl.value,
+      podnosilac: val('podnosilac')
+    };
+  }
+
+  document.getElementById('submitBtn').addEventListener('click', function(){
+    if (!validate()) { showErrors(); return; }
+    buildPrintView();
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Slanje...';
+
+    fetch(SEND_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(collectPayload())
+    }).then(function(res){
+      if (!res.ok) throw new Error('server-error');
+      return res.json().catch(function(){ return {ok:true}; });
+    }).then(function(){
+      document.getElementById('formArea').style.display = 'none';
+      document.getElementById('successBox').style.display = 'block';
+      document.getElementById('autoSentMsg').style.display = 'block';
+      document.getElementById('manualMsg').style.display = 'none';
+      window.scrollTo(0,0);
+    }).catch(function(){
+      // Endpoint nije dostupan (npr. u pregledu ili stranica još nije na hostingu) — ručne opcije kao rezerva
+      document.getElementById('formArea').style.display = 'none';
+      document.getElementById('successBox').style.display = 'block';
+      document.getElementById('autoSentMsg').style.display = 'none';
+      document.getElementById('manualMsg').style.display = 'block';
+      window.scrollTo(0,0);
+    }).finally(function(){
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Pošalji zahtev';
+    });
+  });
+
+  document.getElementById('backBtn').addEventListener('click', function(){
+    document.getElementById('successBox').style.display = 'none';
+    document.getElementById('formArea').style.display = 'block';
+  });
+
+  document.getElementById('pdfBtn').addEventListener('click', function(){
+    buildPrintView();
+    window.print();
+  });
+
+  document.getElementById('mailBtn').addEventListener('click', function(){
+    var lines = [];
+    lines.push('ZAHTEV ZA USLUGE KONTROLISANJA');
+    lines.push('');
+    lines.push('Naziv korisnika: ' + val('korisnikNaziv'));
+    if (val('korisnikPib')) lines.push('PIB/MB: ' + val('korisnikPib'));
+    lines.push('Adresa korisnika: ' + val('korisnikAdresa'));
+    lines.push('Kontakt osoba: ' + val('kontaktOsoba'));
+    lines.push('Telefon: ' + val('telefon'));
+    lines.push('E-mail: ' + val('email'));
+    lines.push('');
+    lines.push('Naziv objekta: ' + val('objekatNaziv'));
+    lines.push('Adresa objekta: ' + val('objekatAdresa'));
+    if (val('objekatLokacija')) lines.push('Lokacija/deo objekta: ' + val('objekatLokacija'));
+    lines.push('');
+    lines.push('Zahtevane usluge:');
+    services.forEach(function(s){
+      var chk = s.querySelector('.svc-check');
+      if (!chk.checked) return;
+      var code = s.getAttribute('data-code');
+      var text = s.querySelector('.service-text').textContent;
+      var qtys = Array.from(s.querySelectorAll('.qty')).map(function(q){
+        var label = q.parentElement.querySelector('label').textContent;
+        var v = q.value.trim();
+        return v ? (label + ': ' + v) : null;
+      }).filter(Boolean).join(', ');
+      lines.push('  [' + code + '] ' + text + (qtys ? ' — ' + qtys : ''));
+    });
+    lines.push('');
+    lines.push('Datum: ' + (dEl.value ? new Date(dEl.value).toLocaleDateString('sr-RS') : ''));
+    lines.push('Podnosilac zahteva: ' + (val('podnosilac') || '—'));
+
+    var subject = encodeURIComponent('Zahtev za usluge kontrolisanja — ' + val('korisnikNaziv'));
+    var body = encodeURIComponent(lines.join('\n'));
+    window.location.href = 'mailto:boban.inovacije@gmail.com?subject=' + subject + '&body=' + body;
+  });
+
+  // Pokaži greske tek nakon prvog pokušaja slanja / promene
+  var attempted = false;
+  submitBtn.addEventListener('click', function(){ attempted = true; showErrors(); });
+  document.getElementById('formArea').addEventListener('input', function(){ if (attempted) showErrors(); });
+  document.getElementById('formArea').addEventListener('change', function(){ if (attempted) showErrors(); });
+
+  validate();
+})();
+</script>
+
+</body>
+</html>
