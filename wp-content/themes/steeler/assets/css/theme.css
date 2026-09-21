@@ -3338,7 +3338,7 @@ form .select2-container--default .select2-selection .select2-selection__placehol
     align-items: center;
     background-color: #fff;
     position: relative;
-    background-image: url(/test-export/wp-content/themes/steeler/assets/images/gradient-header7-bg.jpg);
+    background-image: url(/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/images/gradient-header7-bg.jpg);
     background-position: center;
     background-size: cover;
   }
@@ -4916,7 +4916,7 @@ ul.back {
   padding: 60px 60px 65px;
   position: relative;
   z-index: 1;
-  background-image: url(/test-export/wp-content/themes/steeler/assets/images/format-quote.png);
+  background-image: url(/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/images/format-quote.png);
   background-position: top left;
   background-repeat: no-repeat;
   text-align: center;
@@ -4966,7 +4966,7 @@ ul.back {
   padding: 60px 60px 60px;
   position: relative;
   z-index: 1;
-  background-image: url(/test-export/wp-content/themes/steeler/assets/images/format-link.png);
+  background-image: url(/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/images/format-link.png);
   background-position: top left;
   background-repeat: no-repeat;
   text-align: center;
@@ -7588,7 +7588,7 @@ blockquote.cms-blockquote:after {
   display: block;
   width: 24px;
   height: 20px;
-  background-image: url(/test-export/wp-content/themes/steeler/assets/images/blog-quote-dark.png);
+  background-image: url(/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/images/blog-quote-dark.png);
   position: absolute;
   left: 21px;
   top: 35px;
@@ -8418,7 +8418,7 @@ blockquote.cms-blockquote:after {
   -ms-border-radius: 0px;
   -o-border-radius: 0px;
   border-radius: 0px;
-  background-image: url(/test-export/wp-content/themes/steeler/assets/images/accordion-bar.png);
+  background-image: url(/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/images/accordion-bar.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -12674,7 +12674,7 @@ blockquote.cms-blockquote:after {
   bottom: -25px;
   left: 25px;
   background-color: #cd0001;
-  background-image: url(/test-export/wp-content/themes/steeler/assets/images/service-overlay.png);
+  background-image: url(/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/images/service-overlay.png);
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -14353,37 +14353,37 @@ blockquote.cms-blockquote:after {
   font-family: 'Google Sans';
   font-weight: bold;
   font-style: normal;
-  src: url('/test-export/wp-content/themes/steeler/assets/fonts/main/GoogleSans-Bold.woff2') format('woff2'), url('/test-export/wp-content/themes/steeler/assets/fonts/main/GoogleSans-Bold.woff') format('woff');
+  src: url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/fonts/main/GoogleSans-Bold.woff2') format('woff2'), url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/fonts/main/GoogleSans-Bold.woff') format('woff');
 }
 @font-face {
   font-family: 'Google Sans';
   font-weight: bold;
   font-style: italic;
-  src: url('/test-export/wp-content/themes/steeler/assets/fonts/main/GoogleSans-BoldItalic.woff2') format('woff2'), url('/test-export/wp-content/themes/steeler/assets/fonts/main/GoogleSans-BoldItalic.woff') format('woff');
+  src: url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/fonts/main/GoogleSans-BoldItalic.woff2') format('woff2'), url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/fonts/main/GoogleSans-BoldItalic.woff') format('woff');
 }
 @font-face {
   font-family: 'Google Sans';
   font-weight: 500;
   font-style: normal;
-  src: url('/test-export/wp-content/themes/steeler/assets/fonts/main/GoogleSans-Medium.woff2') format('woff2'), url('/test-export/wp-content/themes/steeler/assets/fonts/main/GoogleSans-Medium.woff') format('woff');
+  src: url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/fonts/main/GoogleSans-Medium.woff2') format('woff2'), url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/fonts/main/GoogleSans-Medium.woff') format('woff');
 }
 @font-face {
   font-family: 'Google Sans';
   font-weight: 500;
   font-style: italic;
-  src: url('/test-export/wp-content/themes/steeler/assets/fonts/main/GoogleSans-MediumItalic.woff2') format('woff2'), url('/test-export/wp-content/themes/steeler/assets/fonts/main/GoogleSans-MediumItalic.woff') format('woff');
+  src: url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/fonts/main/GoogleSans-MediumItalic.woff2') format('woff2'), url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/fonts/main/GoogleSans-MediumItalic.woff') format('woff');
 }
 @font-face {
   font-family: 'Google Sans';
   font-weight: normal;
   font-style: normal;
-  src: url('/test-export/wp-content/themes/steeler/assets/fonts/main/GoogleSans-Regular.woff2') format('woff2'), url('/test-export/wp-content/themes/steeler/assets/fonts/main/GoogleSans-Regular.woff') format('woff');
+  src: url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/fonts/main/GoogleSans-Regular.woff2') format('woff2'), url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/fonts/main/GoogleSans-Regular.woff') format('woff');
 }
 @font-face {
   font-family: 'Google Sans';
   font-weight: normal;
   font-style: italic;
-  src: url('/test-export/wp-content/themes/steeler/assets/fonts/main/GoogleSans-Italic.woff2') format('woff2'), url('/test-export/wp-content/themes/steeler/assets/fonts/main/GoogleSans-Italic.woff') format('woff');
+  src: url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/fonts/main/GoogleSans-Italic.woff2') format('woff2'), url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/fonts/main/GoogleSans-Italic.woff') format('woff');
 }
 .heading-default-font {
   font-family: 'Google Sans', serif !important;
@@ -14395,19 +14395,19 @@ blockquote.cms-blockquote:after {
   font-family: 'SF Compact Text';
   font-weight: 600;
   font-style: normal;
-  src: url('/test-export/wp-content/themes/steeler/assets/fonts/main/SFCompactText-Semibold.woff2') format('woff2'), url('/test-export/wp-content/themes/steeler/assets/fonts/main/SFCompactText-Semibold.woff') format('woff');
+  src: url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/fonts/main/SFCompactText-Semibold.woff2') format('woff2'), url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/fonts/main/SFCompactText-Semibold.woff') format('woff');
 }
 @font-face {
   font-family: 'SF Compact Text';
   font-weight: normal;
   font-style: normal;
-  src: url('/test-export/wp-content/themes/steeler/assets/fonts/main/SFCompactText-Regular.woff2') format('woff2'), url('/test-export/wp-content/themes/steeler/assets/fonts/main/SFCompactText-Regular.woff') format('woff');
+  src: url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/fonts/main/SFCompactText-Regular.woff2') format('woff2'), url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/fonts/main/SFCompactText-Regular.woff') format('woff');
 }
 @font-face {
   font-family: 'SF Compact Text';
   font-weight: 200;
   font-style: italic;
-  src: url('/test-export/wp-content/themes/steeler/assets/fonts/main/SFCompactText-LightItalic.woff2') format('woff2'), url('/test-export/wp-content/themes/steeler/assets/fonts/main/SFCompactText-LightItalic.woff') format('woff');
+  src: url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/fonts/main/SFCompactText-LightItalic.woff2') format('woff2'), url('/vatrosprem-novi-sajt/wp-content/themes/steeler/assets/fonts/main/SFCompactText-LightItalic.woff') format('woff');
 }
 .body-default-font {
   font-family: 'SF Compact Text', sans-serif !important;
