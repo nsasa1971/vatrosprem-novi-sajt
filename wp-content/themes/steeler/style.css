@@ -27,3 +27,15 @@ Use it to make something cool, have fun, and share what you've learned with othe
   margin-left: -50vw !important;
   margin-right: -50vw !important;
 }
+
+/* Elementor hides elements with scroll/load entrance animations
+   (icon boxes, images, headings) behind visibility:hidden until its JS
+   detects them entering the viewport and swaps in the animation class.
+   On a slow connection, a JS hiccup, or a screenshot/crawl taken before
+   that JS runs, the content stays permanently invisible even though it's
+   fully present in the markup. Force it visible immediately so content
+   never depends on that script to be seen; the fade-in is a nice-to-have,
+   not a requirement to see icons/text/images. */
+.elementor-invisible {
+  visibility: visible !important;
+}
