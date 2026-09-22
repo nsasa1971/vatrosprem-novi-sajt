@@ -474,286 +474,365 @@ document.documentElement.classList.add("tahefobu-js");
         </div>
                 </div>
         </section>
-                <section class="elementor-section elementor-top-section elementor-element elementor-element-6926bc27 elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6926bc27" data-element_type="section" data-e-type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
-                            <div class="elementor-background-overlay"></div>
-                
-                        <div class="elementor-container elementor-column-gap-default ">
-            		<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1b2e1881" data-id="1b2e1881" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-				        <section class="elementor-section elementor-inner-section elementor-element elementor-element-7d89e757 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="7d89e757" data-element_type="section" data-e-type="section">
-            
-                        <div class="elementor-container elementor-column-gap-default ">
-            		<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-57b1ad6d" data-id="57b1ad6d" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-1cf89df8 elementor-widget elementor-widget-cms_heading" data-id="1cf89df8" data-element_type="widget" data-e-type="widget" data-widget_type="cms_heading.default">
-				<div class="elementor-widget-container">
-					<div class="cms-heading layout1 heading-center">
-    
-            <h2 class="custom-heading">
-            <span>
-                Our Latest Projects            </span>
-        </h2>
-        
-            <div class="custom-description">
-            All functions including supply chain, value chain, project scheduling, manufacturing, services and spares, technology, R&amp;D, etc. are integrated to give a complete solutions package.        </div>
-    
-            <span class="heading-underline solid">
-            <span></span>
-        </span>
-    
+<style>
+.ref-page-wrap{max-width:1140px;margin:0 auto;padding:0 20px;}
+.ref-gallery-heading{text-align:center;margin:0 0 10px;}
+.ref-gallery-heading h2{font-size:38px;font-weight:800;margin:0 0 12px;color:#1A191D;}
+.ref-gallery-heading p{max-width:760px;margin:0 auto 40px;color:#666;font-size:16px;line-height:1.6;}
+.ref-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:70px;}
+.ref-gallery-item{position:relative;border-radius:8px;overflow:hidden;box-shadow:0 4px 16px rgba(0,0,0,.1);aspect-ratio:4/3;}
+.ref-gallery-item img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;}
+.ref-gallery-item:hover img{transform:scale(1.06);}
+.ref-gallery-caption{position:absolute;left:0;right:0;bottom:0;background:linear-gradient(0deg,rgba(0,0,0,.75),transparent);color:#fff;font-weight:700;font-size:14px;letter-spacing:.5px;padding:30px 18px 14px;text-transform:uppercase;}
+.ref-intro-heading{text-align:center;margin:0 0 50px;}
+.ref-intro-heading h2{font-size:34px;font-weight:800;margin:0 0 10px;color:#1A191D;}
+.ref-intro-heading p{color:#CD0001;font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:14px;margin:0;}
+.ref-wrap{margin-bottom:20px;}
+.ref-section{margin:0 0 36px;}
+.ref-header{background:#CD0001;color:#fff;padding:16px 24px;font-weight:700;font-size:15px;letter-spacing:.3px;text-transform:uppercase;border-radius:8px 8px 0 0;display:flex;align-items:center;gap:14px;}
+.ref-num{background:rgba(255,255,255,.2);border-radius:4px;padding:2px 9px;font-size:13px;}
+.ref-table{width:100%;border-collapse:collapse;background:#fff;box-shadow:0 2px 14px rgba(0,0,0,.07);border-radius:0 0 8px 8px;overflow:hidden;}
+.ref-table tr:nth-child(even){background:#f7f7f8;}
+.ref-table tr:hover{background:#fbeaea;}
+.ref-table td{padding:14px 24px;vertical-align:top;border-top:1px solid #ececec;font-size:14.5px;line-height:1.6;transition:background .15s;}
+.ref-table td.ref-company{width:30%;font-weight:700;color:#1A191D;}
+.ref-table td.ref-company small{display:block;font-weight:400;color:#888;font-size:12.5px;margin-top:3px;text-transform:none;letter-spacing:0;}
+.ref-table td.ref-projects{color:#444;}
+.ref-chips{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#ececec;border-radius:0 0 8px 8px;overflow:hidden;box-shadow:0 2px 14px rgba(0,0,0,.07);}
+.ref-chip{background:#fff;padding:16px 24px;}
+.ref-chip:nth-child(even){background:#f7f7f8;}
+.ref-chip-name{display:block;font-weight:700;color:#1A191D;font-size:14.5px;}
+.ref-chip-loc{display:block;color:#888;font-size:12.5px;margin-top:3px;}
+@media(max-width:767px){
+.ref-gallery{grid-template-columns:1fr;}
+.ref-chips{grid-template-columns:1fr;}
+.ref-table, .ref-table tbody, .ref-table tr, .ref-table td, .ref-table td.ref-company, .ref-table td.ref-projects{display:block;width:100%;}
+.ref-table tr{padding:14px 0;}
+.ref-table td.ref-company{border-top:3px solid #CD0001;padding-bottom:2px;}
+.ref-table td.ref-projects{padding-top:0;padding-bottom:18px;}
+.ref-gallery-heading h2, .ref-intro-heading h2{font-size:28px;}
+}
+</style>
+<div class="ref-page-wrap">
+<div class="ref-gallery-heading">
+<h2>Deo naših projekata</h2>
+<p>Pogledajte galeriju dela naših uspešno realizovanih projekata gde smo kroz inovativna inženjerska rešenja i vrhunsku opremu obezbedili maksimalnu zaštitu za objekte različitih namena i kompleksnosti.</p>
 </div>
-
-				</div>
-				</div>
-		        </div>
-        </div>
-                </div>
-        </section>
-                <section class="elementor-section elementor-inner-section elementor-element elementor-element-417a84a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="417a84a" data-element_type="section" data-e-type="section">
-            
-                        <div class="elementor-container elementor-column-gap-default ">
-            		<div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-0b46d99" data-id="0b46d99" data-element_type="column" data-e-type="column">
-        <div class="elementor-widget-wrap elementor-element-populated">
-						<div class="elementor-element elementor-element-81c66e6 elementor-widget elementor-widget-cms_lq_project_grid" data-id="81c66e6" data-element_type="widget" data-e-type="widget" data-widget_type="cms_lq_project_grid.default">
-				<div class="elementor-widget-container">
-					
-<div id="cms_lq_project_grid-81c66e6" class="cms-grid cms-lq-project-grid layout3" data-layout="masonry" data-start-page="1" data-max-pages="2" data-total="13" data-perpage="8" data-next-link="/project-masonry/page/2/">
-            <div class="grid-filter-wrap align-center">
-            <span class="filter-item active" data-filter="*">
-                <img decoding="async" src="/wp-content/uploads/2020/12/cat-icon-all.png" class="attachment-full size-full" alt="category icon">                SVI PROJEKTI            </span>
-                                                            
-                <span class="filter-item" data-filter=".isporuka-opreme">
-                                        ISPORUKA OPREME                </span>
-                                                            
-                <span class="filter-item" data-filter=".izvodjenje-i-servisiranje">
-                                        IZVOĐENJE I SERVISIRANJE                </span>
-                                                            
-                <span class="filter-item" data-filter=".projektovanje-i-inzenjering">
-                                        PROJEKTOVANJE I INŽENJERING                </span>
-                    </div>
-    
-    <div class="cms-grid-inner cms-grid-masonry row animate-time" data-gutter="15">
-                    <div class="grid-sizer col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12"></div>
-                            <div class="grid-item col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 izvodjenje-i-servisiranje projektovanje-i-inzenjering">
-                <div class="grid-item-inner " data-wow-duration="1.3s">
-                                            <div class="entry-featured">
-                            <div class="post-image">
-                                <a href="/lq-project/m-enterijer-gradnja/"><img fetchpriority="high" decoding="async" class="" src="/wp-content/uploads/2026/07/hotel-royal-putnik-vranje-alterno-inc-5-e1785415322504-730x730.jpg" width="730" height="730" alt="hotel-royal-putnik-vranje-alterno-inc-5" title="hotel-royal-putnik-vranje-alterno-inc-5"></a>
-                            </div>
-                        </div>
-                    
-                    <div class="entry-body">
-                        <div class="entry-body-inner">
-                            <h3 class="entry-title">
-                            <a href="/lq-project/m-enterijer-gradnja/">M ENTERIJER GRADNJA</a>
-                        </h3>
-                                                    <div class="lq-project-meta font-smooth">
-                                <a href="/lq-project-category/izvodjenje-i-servisiranje/" rel="tag">IZVOĐENJE I SERVISIRANJE</a> / <a href="/lq-project-category/projektovanje-i-inzenjering/" rel="tag">PROJEKTOVANJE I INŽENJERING</a>                            </div>
-                                                                            <div class="action-buttons">
-                                <a class="bt-more-plus" href="/lq-project/m-enterijer-gradnja/">
-                                    <span class="x-line"></span>
-                                    <span class="y-line"></span>
-                                </a>
-                            </div>
-                                            </div>
-                </div>
-            </div>
-            </div>
-                    <div class="grid-item col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 projektovanje-i-inzenjering">
-                <div class="grid-item-inner " data-wow-duration="1.3s">
-                                            <div class="entry-featured">
-                            <div class="post-image">
-                                <a href="/lq-project/new-york-showcase/"><img decoding="async" class="" src="/wp-content/uploads/2020/12/project_image_1-350x350.jpg" width="350" height="350" alt="project image" title="project_image_01"></a>
-                            </div>
-                        </div>
-                    
-                    <div class="entry-body">
-                        <div class="entry-body-inner">
-                            <h3 class="entry-title">
-                            <a href="/lq-project/new-york-showcase/">JUGOFUND DOO</a>
-                        </h3>
-                                                    <div class="lq-project-meta font-smooth">
-                                <a href="/lq-project-category/projektovanje-i-inzenjering/" rel="tag">PROJEKTOVANJE I INŽENJERING</a>                            </div>
-                                                                            <div class="action-buttons">
-                                <a class="bt-more-plus" href="/lq-project/new-york-showcase/">
-                                    <span class="x-line"></span>
-                                    <span class="y-line"></span>
-                                </a>
-                            </div>
-                                            </div>
-                </div>
-            </div>
-            </div>
-                    <div class="grid-item col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 isporuka-opreme">
-                <div class="grid-item-inner " data-wow-duration="1.3s">
-                                            <div class="entry-featured">
-                            <div class="post-image">
-                                <a href="/lq-project/agricultural-products/"><img decoding="async" class="" src="/wp-content/uploads/2020/12/project_image_2-350x350.jpg" width="350" height="350" alt="project image" title="project_image_02"></a>
-                            </div>
-                        </div>
-                    
-                    <div class="entry-body">
-                        <div class="entry-body-inner">
-                            <h3 class="entry-title">
-                            <a href="/lq-project/agricultural-products/">MONTAŽA MINEL DOO</a>
-                        </h3>
-                                                    <div class="lq-project-meta font-smooth">
-                                <a href="/lq-project-category/isporuka-opreme/" rel="tag">ISPORUKA OPREME</a>                            </div>
-                                                                            <div class="action-buttons">
-                                <a class="bt-more-plus" href="/lq-project/agricultural-products/">
-                                    <span class="x-line"></span>
-                                    <span class="y-line"></span>
-                                </a>
-                            </div>
-                                            </div>
-                </div>
-            </div>
-            </div>
-                    <div class="grid-item col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 izvodjenje-i-servisiranje">
-                <div class="grid-item-inner " data-wow-duration="1.3s">
-                                            <div class="entry-featured">
-                            <div class="post-image">
-                                <a href="/lq-project/drone-lab-bolivia/"><img loading="lazy" decoding="async" class="" src="/wp-content/uploads/2020/12/project_image_3-730x346.jpg" width="730" height="346" alt="project image" title="project_image_03"></a>
-                            </div>
-                        </div>
-                    
-                    <div class="entry-body">
-                        <div class="entry-body-inner">
-                            <h3 class="entry-title">
-                            <a href="/lq-project/drone-lab-bolivia/">EXING B&amp;P DOO</a>
-                        </h3>
-                                                    <div class="lq-project-meta font-smooth">
-                                <a href="/lq-project-category/izvodjenje-i-servisiranje/" rel="tag">IZVOĐENJE I SERVISIRANJE</a>                            </div>
-                                                                            <div class="action-buttons">
-                                <a class="bt-more-plus" href="/lq-project/drone-lab-bolivia/">
-                                    <span class="x-line"></span>
-                                    <span class="y-line"></span>
-                                </a>
-                            </div>
-                                            </div>
-                </div>
-            </div>
-            </div>
-                    <div class="grid-item col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 projektovanje-i-inzenjering">
-                <div class="grid-item-inner " data-wow-duration="1.3s">
-                                            <div class="entry-featured">
-                            <div class="post-image">
-                                <a href="/lq-project/international-trading/"><img loading="lazy" decoding="async" class="" src="/wp-content/uploads/2020/12/project_image_4-350x350.jpg" width="350" height="350" alt="project image" title="project_image_04"></a>
-                            </div>
-                        </div>
-                    
-                    <div class="entry-body">
-                        <div class="entry-body-inner">
-                            <h3 class="entry-title">
-                            <a href="/lq-project/international-trading/">International Trading</a>
-                        </h3>
-                                                    <div class="lq-project-meta font-smooth">
-                                <a href="/lq-project-category/projektovanje-i-inzenjering/" rel="tag">PROJEKTOVANJE I INŽENJERING</a>                            </div>
-                                                                            <div class="action-buttons">
-                                <a class="bt-more-plus" href="/lq-project/international-trading/">
-                                    <span class="x-line"></span>
-                                    <span class="y-line"></span>
-                                </a>
-                            </div>
-                                            </div>
-                </div>
-            </div>
-            </div>
-                    <div class="grid-item col-xl-3 col-lg-6 col-md-12 col-sm-12 col-12 isporuka-opreme">
-                <div class="grid-item-inner " data-wow-duration="1.3s">
-                                            <div class="entry-featured">
-                            <div class="post-image">
-                                <a href="/lq-project/randstad-polska/"><img loading="lazy" decoding="async" class="" src="/wp-content/uploads/2020/12/project_image_5-350x350.jpg" width="350" height="350" alt="project image" title="project_image_05"></a>
-                            </div>
-                        </div>
-                    
-                    <div class="entry-body">
-                        <div class="entry-body-inner">
-                            <h3 class="entry-title">
-                            <a href="/lq-project/randstad-polska/">Randstad Polska</a>
-                        </h3>
-                                                    <div class="lq-project-meta font-smooth">
-                                <a href="/lq-project-category/isporuka-opreme/" rel="tag">ISPORUKA OPREME</a>                            </div>
-                                                                            <div class="action-buttons">
-                                <a class="bt-more-plus" href="/lq-project/randstad-polska/">
-                                    <span class="x-line"></span>
-                                    <span class="y-line"></span>
-                                </a>
-                            </div>
-                                            </div>
-                </div>
-            </div>
-            </div>
-                    <div class="grid-item col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 izvodjenje-i-servisiranje">
-                <div class="grid-item-inner " data-wow-duration="1.3s">
-                                            <div class="entry-featured">
-                            <div class="post-image">
-                                <a href="/lq-project/health-and-safety/"><img loading="lazy" decoding="async" class="" src="/wp-content/uploads/2020/12/project-image-6-1-730x730.jpg" width="730" height="730" alt="project image" title="project-image-6"></a>
-                            </div>
-                        </div>
-                    
-                    <div class="entry-body">
-                        <div class="entry-body-inner">
-                            <h3 class="entry-title">
-                            <a href="/lq-project/health-and-safety/">Health and Safety</a>
-                        </h3>
-                                                    <div class="lq-project-meta font-smooth">
-                                <a href="/lq-project-category/izvodjenje-i-servisiranje/" rel="tag">IZVOĐENJE I SERVISIRANJE</a>                            </div>
-                                                                            <div class="action-buttons">
-                                <a class="bt-more-plus" href="/lq-project/health-and-safety/">
-                                    <span class="x-line"></span>
-                                    <span class="y-line"></span>
-                                </a>
-                            </div>
-                                            </div>
-                </div>
-            </div>
-            </div>
-                    <div class="grid-item col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 projektovanje-i-inzenjering">
-                <div class="grid-item-inner " data-wow-duration="1.3s">
-                                            <div class="entry-featured">
-                            <div class="post-image">
-                                <a href="/lq-project/marine-cargo-insurance/"><img loading="lazy" decoding="async" class="" src="/wp-content/uploads/2020/12/project_image_07-730x346.jpg" width="730" height="346" alt="project image" title="project_image_07"></a>
-                            </div>
-                        </div>
-                    
-                    <div class="entry-body">
-                        <div class="entry-body-inner">
-                            <h3 class="entry-title">
-                            <a href="/lq-project/marine-cargo-insurance/">Marine Cargo Insurance</a>
-                        </h3>
-                                                    <div class="lq-project-meta font-smooth">
-                                <a href="/lq-project-category/projektovanje-i-inzenjering/" rel="tag">PROJEKTOVANJE I INŽENJERING</a>                            </div>
-                                                                            <div class="action-buttons">
-                                <a class="bt-more-plus" href="/lq-project/marine-cargo-insurance/">
-                                    <span class="x-line"></span>
-                                    <span class="y-line"></span>
-                                </a>
-                            </div>
-                                            </div>
-                </div>
-            </div>
-            </div>
-            </div>
-
-            <div class="cms-grid-pagination" data-loadmore="{&quot;post_type&quot;:&quot;lq-project&quot;,&quot;startPage&quot;:1,&quot;maxPages&quot;:2,&quot;total&quot;:13,&quot;perpage&quot;:8,&quot;nextLink&quot;:&quot;\/project-masonry\/page\/2\/&quot;,&quot;source&quot;:&quot;&quot;,&quot;orderby&quot;:&quot;date&quot;,&quot;order&quot;:&quot;desc&quot;,&quot;limit&quot;:8,&quot;post_ids&quot;:&quot;&quot;,&quot;col_xl&quot;:6,&quot;col_lg&quot;:6,&quot;col_md&quot;:12,&quot;col_sm&quot;:12,&quot;col_xs&quot;:12,&quot;thumbnail_size&quot;:&quot;full&quot;,&quot;thumbnail_custom_dimension&quot;:{&quot;width&quot;:&quot;570&quot;,&quot;height&quot;:&quot;570&quot;},&quot;title_tag&quot;:&quot;h3&quot;,&quot;pagination_type&quot;:&quot;pagination&quot;,&quot;show_meta&quot;:&quot;true&quot;,&quot;show_excerpt&quot;:&quot;true&quot;,&quot;num_words&quot;:40,&quot;show_button&quot;:&quot;true&quot;,&quot;cms_animate&quot;:&quot;&quot;,&quot;template_type&quot;:&quot;lq_project_grid_layout3&quot;,&quot;tax&quot;:[&quot;lq-project-category&quot;,&quot;lq-project-category&quot;,&quot;lq-project-category&quot;]}" data-query="{&quot;post_type&quot;:&quot;lq-project&quot;,&quot;posts_per_page&quot;:8,&quot;order&quot;:&quot;desc&quot;,&quot;orderby&quot;:&quot;date&quot;,&quot;tax_query&quot;:{&quot;relation&quot;:&quot;OR&quot;},&quot;post__not_in&quot;:[5339]}">
-                    <nav class="navigation posts-pagination ajax">
-            <div class="posts-page-links">
-                <span aria-current="page" class="page-numbers current">1</span>
-<a class="page-numbers" href="#2">2</a>
-<a class="next page-numbers" href="#2"><i class="far fac-angle-double-right" aria-hidden="true"></i></a>            </div>
-        </nav>
-            </div>
-        </div>				</div>
-				</div>
-		        </div>
-        </div>
-                </div>
-        </section>
-                </div>
-        </div>
-                </div>
-        </section>
+<div class="ref-gallery">
+<div class="ref-gallery-item">
+<img decoding="async" loading="lazy" src="/wp-content/uploads/2026/07/hotel-royal-putnik-vranje-alterno-inc-5-e1785415322504.jpg" alt="HOTEL VRANJE">
+<span class="ref-gallery-caption">HOTEL VRANJE</span>
+</div>
+<div class="ref-gallery-item">
+<img decoding="async" loading="lazy" src="/wp-content/uploads/2026/07/Merkator-S-e1785419897709.jpg" alt="MERKATOR">
+<span class="ref-gallery-caption">MERKATOR</span>
+</div>
+<div class="ref-gallery-item">
+<img decoding="async" loading="lazy" src="/wp-content/uploads/2026/07/CMC-GRAMAX.jpg" alt="CMC GRAMAX">
+<span class="ref-gallery-caption">CMC GRAMAX</span>
+</div>
+<div class="ref-gallery-item">
+<img decoding="async" loading="lazy" src="/wp-content/uploads/2026/07/ENERGOPROJEKT-e1785421217664.jpg" alt="ENERGOPROJEKT">
+<span class="ref-gallery-caption">ENERGOPROJEKT</span>
+</div>
+<div class="ref-gallery-item">
+<img decoding="async" loading="lazy" src="/wp-content/uploads/2026/07/metropol.jpg" alt="METROPOL">
+<span class="ref-gallery-caption">METROPOL</span>
+</div>
+</div>
+<div class="ref-intro-heading">
+<p>Referentna lista</p>
+<h2>Isporuka i ugradnja</h2>
+</div>
+<div class="ref-wrap">
+<div class="ref-section">
+<div class="ref-header"><span class="ref-num">01</span>Stabilne instalacije za gašenje, odimljavanje i ventilaciju, dojavu i detekciju gasa (sva 3 sistema zajedno)</div>
+<table class="ref-table">
+<tbody>
+<tr>
+<td class="ref-company">M ENTERIJER GRADNJA<small>Beograd</small></td>
+<td class="ref-projects">kompleks zgrada Kamendin cca 5.000 m2<br>hotel Vranje 2 cca 5.885 m2<br>zgrada EPS-a na Autokomandi cca 1.500 m2<br>nova zgrada FON-a 900 m2<br>PARK VILLA cca 16.000 m2<br>LOŽIONICA cca 5.000 m2<br>BOŠKO BUHA cca 2.050 m2</td>
+</tr>
+<tr>
+<td class="ref-company">W.D. CONCORD WEST<small>Beograd</small></td>
+<td class="ref-projects">Multifunkcionalna dvorana Košutnjak cca 1.600 m2</td>
+</tr>
+<tr>
+<td class="ref-company">GP NAPRED AD<small>Beograd</small></td>
+<td class="ref-projects">Cara Uroša 57 cca 2.000 m2<br>upravna zgrada GP Napred cca 2.000 m2<br>Mirijevo cca 2.500 m2<br>Blok 26 cca 24.000 m2</td>
+</tr>
+<tr>
+<td class="ref-company">ENERGOPROJEKT IZGRADNJA<small>Beograd</small></td>
+<td class="ref-projects">Blok 24 cca 1.000 m2<br>Trg u Lazarevcu cca 1.000 m2</td>
+</tr>
+<tr>
+<td class="ref-company">ENERGOPROJEKT NISKOGRADNJA<small>Beograd</small></td>
+<td class="ref-projects">TPS Zemun cca 20.000 m2</td>
+</tr>
+<tr>
+<td class="ref-company">BANAT GRADNJA<small>Beograd</small></td>
+<td class="ref-projects">Kruševačka 20-22 cca 800 m2</td>
+</tr>
+<tr>
+<td class="ref-company">PROJEKAT ŠUMATOVAČKA 105<small>Beograd</small></td>
+<td class="ref-projects">Šumatovačka 105 cca 960 m2</td>
+</tr>
+<tr>
+<td class="ref-company">BANJA KOMERC BEKAMENT<small>Aranđelovac</small></td>
+<td class="ref-projects">Vojvode Hrvoja 21 cca 600 m2<br>Fortuna cca  1.300 m2<br>Dravska 8 cca  1.800 m2</td>
+</tr>
+<tr>
+<td class="ref-company">SD SINERGIJA<small>Beograd</small></td>
+<td class="ref-projects">Mihaila Bulgakova cca  1.900 m2<br>Marine Veličković 7 cca  400 m2</td>
+</tr>
+<tr>
+<td class="ref-company">STEDING<small>Loznica</small></td>
+<td class="ref-projects">Krfska 1 cca  900 m2</td>
+</tr>
+<tr>
+<td class="ref-company">OMORIKA STIL<small>Novi Banovci</small></td>
+<td class="ref-projects">Gospodara Vučića 224 cca  500 m2</td>
+</tr>
+<tr>
+<td class="ref-company">STEKAM<small>Beograd</small></td>
+<td class="ref-projects">Buket, Vrnjačka Banja cca 1.350 m2</td>
+</tr>
+<tr>
+<td class="ref-company">PREMIJUS<small>Beograd</small></td>
+<td class="ref-projects">Cerska 22 cca  500 m2</td>
+</tr>
+<tr>
+<td class="ref-company">MAFI GROUP<small>NISKOGRADNJA AS INVEST</small></td>
+<td class="ref-projects">Aleksandar Bugarski cca 1.050 m2</td>
+</tr>
+<tr>
+<td class="ref-company">DOWNTOWN CONSTRUCTION<small>Beograd</small></td>
+<td class="ref-projects">Bregalnička 22 cca 640 m2</td>
+</tr>
+<tr>
+<td class="ref-company">NIKODU GRADNJA<small>Beograd</small></td>
+<td class="ref-projects">Pregrevica 64 cca 600 m2<br>Cara Dušana 226, Zemun cca  650 m2</td>
+</tr>
+<tr>
+<td class="ref-company">GREDA BUILDING<small>Beograd</small></td>
+<td class="ref-projects">Vojvode Dobrnjca 7 cca 650 m2</td>
+</tr>
+<tr>
+<td class="ref-company">KAPETAN VLIIGO<small>Beograd</small></td>
+<td class="ref-projects">Kapetan Mišina 39 cca 600 m2</td>
+</tr>
+<tr>
+<td class="ref-company">OUN PROMET<small>Beograd</small></td>
+<td class="ref-projects">Šumatovačka 139-141 cca 1.300 m2</td>
+</tr>
+<tr>
+<td class="ref-company">OLD TOWN 028<small>Beograd</small></td>
+<td class="ref-projects">Gospodar Jovanova 28 cca 700 m2</td>
+</tr>
+<tr>
+<td class="ref-company">PAVKOM<small>Beograd</small></td>
+<td class="ref-projects">Bregalnička 24 cca 670m2</td>
+</tr>
+<tr>
+<td class="ref-company">RD INŽENJERING<small>Beograd</small></td>
+<td class="ref-projects">Tikveška 3 cca 700 m2</td>
+</tr>
+<tr>
+<td class="ref-company">ALBONI PROJEKT</td>
+<td class="ref-projects">Banjska 23-25 cca 400 m2</td>
+</tr>
+<tr>
+<td class="ref-company">RD INŽENJERING DVA<small>Beograd</small></td>
+<td class="ref-projects">Cerska 77 cca 720 m2</td>
+</tr>
+<tr>
+<td class="ref-company">M INVEST RENTAL<small>Beograd</small></td>
+<td class="ref-projects">Nestora Žučnog 17-19 cca 2.500 m2</td>
+</tr>
+<tr>
+<td class="ref-company">KSN INVEST<small>Beograd</small></td>
+<td class="ref-projects">Gročanska 6 cca 700 m2</td>
+</tr>
+<tr>
+<td class="ref-company">S INVEST HOUSE<small>Beograd</small></td>
+<td class="ref-projects">Južni bulevar 23 cca 650 m2</td>
+</tr>
+<tr>
+<td class="ref-company">TRIGONEX 9<small>Beograd</small></td>
+<td class="ref-projects">Pregrevica 46 cca 850 m2<br>Mihajla Gavrilovića 3 cca 660 m2</td>
+</tr>
+<tr>
+<td class="ref-company">TEMING ELECTROTECHNOLOGY<small>Niš</small></td>
+<td class="ref-projects">Južni bulevar 80 cca 1.400 m2</td>
+</tr>
+<tr>
+<td class="ref-company">BOMAX<small>Subotica</small></td>
+<td class="ref-projects">Vojvode Stepe 164 cca 700 m2<br>Kajmakčalanska 38 cca 780 m2</td>
+</tr>
+<tr>
+<td class="ref-company">GAJ INŽENJERING<small>Beograd</small></td>
+<td class="ref-projects">Batajnički drum 6M cca 1.000 m2</td>
+</tr>
+<tr>
+<td class="ref-company">TIM GRADNJA EXCLUSIVE<small>Beograd</small></td>
+<td class="ref-projects">Vojvode Stepe 250 cca 670 m2</td>
+</tr>
+<tr>
+<td class="ref-company">EX ING B&amp;P<small>Beograd</small></td>
+<td class="ref-projects">rekonstrukcije hotela Metropol cca 20.000 m2</td>
+</tr>
+<tr>
+<td class="ref-company">BASAL<small>Beograd</small></td>
+<td class="ref-projects">garaža cca 10.000 m2</td>
+</tr>
+</tbody></table>
+</div>
+<div class="ref-section">
+<div class="ref-header"><span class="ref-num">02</span>Stabilne instalacije za gašenje</div>
+<table class="ref-table">
+<tbody>
+<tr>
+<td class="ref-company">W.D. CONCORD WEST<small>Beograd</small></td>
+<td class="ref-projects">EXPO – GALOVICA 1 – cca 5.833 m2<br>EXPO – GALOVICA 2 – cca 5.833 m2</td>
+</tr>
+<tr>
+<td class="ref-company">BBSE INVESTMENTS<small>Beograd</small></td>
+<td class="ref-projects">objekat PALACE ONE cca 3.000 m2</td>
+</tr>
+<tr>
+<td class="ref-company">EX ING B&amp;P INŽENJERING<small>Beograd</small></td>
+<td class="ref-projects">Dunavske terase cca 10.000 m2</td>
+</tr>
+<tr>
+<td class="ref-company">NIS AD NOVI SAD<small>Novi Sad</small></td>
+<td class="ref-projects">Projektovanje, isporuka i montaža sistema za gašenje teškom penom</td>
+</tr>
+<tr>
+<td class="ref-company">MONTAŽA MINEL<small>Pančevo</small></td>
+<td class="ref-projects">- oprema za stabilni sistem za gašenje penom</td>
+</tr>
+<tr>
+<td class="ref-company">POWER INTER MONT<small>Beograd</small></td>
+<td class="ref-projects">- oprema za stabilni sistem za gašenje penom</td>
+</tr>
+<tr>
+<td class="ref-company">EURO PETROL<small>Beograd</small></td>
+<td class="ref-projects">- oprema za stabilni sistem za gašenje penom</td>
+</tr>
+<tr>
+<td class="ref-company">GOŠA MONTAŽA<small>Beograd</small></td>
+<td class="ref-projects">- oprema za stabilni sistem za gašenje penom</td>
+</tr>
+<tr>
+<td class="ref-company">MOTORENWERKE<small>Subotica</small></td>
+<td class="ref-projects">- oprema za stabilni sistem za gašenje penom</td>
+</tr>
+<tr>
+<td class="ref-company">JP EPS – OGRANAK KOLUBARA<small>Kostolac</small></td>
+<td class="ref-projects">- stabilna instalacija za gašenje, dojava i detekcija gasa, sistem za otprašivanje na 4 bagera i 3 odlagača</td>
+</tr>
+<tr>
+<td class="ref-company">THYSSEN KRUPP GmbH</td>
+<td class="ref-projects">- ugradnja protipožarnog sistema na bageru za iskop uglja</td>
+</tr>
+<tr>
+<td class="ref-company">JKP GSP BEOGRAD<small>Beograd</small></td>
+<td class="ref-projects">- stabilni sistem gašenja motornog prostora na preko 300 vozila</td>
+</tr>
+</tbody></table>
+</div>
+<div class="ref-section">
+<div class="ref-header"><span class="ref-num">03</span>Ventilacija i odimljavanje</div>
+<table class="ref-table">
+<tbody>
+<tr>
+<td class="ref-company">PREMIJUS</td>
+<td class="ref-projects">Stari Mercator cca 650 m2</td>
+</tr>
+</tbody></table>
+</div>
+<div class="ref-section">
+<div class="ref-header"><span class="ref-num">04</span>Termotehničke instalacije</div>
+<table class="ref-table">
+<tbody>
+<tr>
+<td class="ref-company">DOTO CONSTRUCTION<small>Beograd</small></td>
+<td class="ref-projects">distributivni centar Roma company u Novom Sadu<br>700 m2</td>
+</tr>
+</tbody></table>
+</div>
+<div class="ref-section">
+<div class="ref-header"><span class="ref-num">05</span>Isporuka, ugradnja, kontrola i servis PP opreme</div>
+<div class="ref-chips">
+<div class="ref-chip">
+<span class="ref-chip-name">NIS AD NOVI SAD</span>
+<span class="ref-chip-loc">Novi Sad</span>
+</div>
+<div class="ref-chip">
+<span class="ref-chip-name">LUKA BEOGRAD</span>
+<span class="ref-chip-loc">Beograd – preko 1.500 PP opreme</span>
+</div>
+<div class="ref-chip">
+<span class="ref-chip-name">GAJ INŽENJERING</span>
+<span class="ref-chip-loc">Beograd</span>
+</div>
+<div class="ref-chip">
+<span class="ref-chip-name">AGROECONOMIST</span>
+<span class="ref-chip-loc">Hoteli Nobel group</span>
+</div>
+<div class="ref-chip">
+<span class="ref-chip-name">SRBIJAAUTOPUT</span>
+<span class="ref-chip-loc">Beograd – preko 400 PP opreme</span>
+</div>
+<div class="ref-chip">
+<span class="ref-chip-name">STAMBENE ZAJEDNICE U BEOGRADU I MLADENOVCU – preko 200</span>
+</div>
+<div class="ref-chip">
+<span class="ref-chip-name">VELETRŽNICA</span>
+<span class="ref-chip-loc">Beograd</span>
+</div>
+<div class="ref-chip">
+<span class="ref-chip-name">GRANEXPORT</span>
+<span class="ref-chip-loc">Pančevo</span>
+</div>
+<div class="ref-chip">
+<span class="ref-chip-name">KOMESARIJAT ZA IZBEGLICE</span>
+<span class="ref-chip-loc">Beograd</span>
+</div>
+<div class="ref-chip">
+<span class="ref-chip-name">KOMPRESOR SERVIS I REMONT</span>
+<span class="ref-chip-loc">Beograd</span>
+</div>
+</div>
+</div>
+<div class="ref-section">
+<div class="ref-header"><span class="ref-num">06</span>Ugradnja i servis</div>
+<table class="ref-table">
+<tbody>
+<tr>
+<td class="ref-company">FABRIKA ULJA BANAT<small>Nova Crnja</small></td>
+<td class="ref-projects">- ugradnja i kontrola protivpožarnog sistema sa lakom penom</td>
+</tr>
+<tr>
+<td class="ref-company">CLICK&amp;FIND ITALY</td>
+<td class="ref-projects">- ugradnja GPS sistema u cisterne NIS-a</td>
+</tr>
+<tr>
+<td class="ref-company">EX ING B&amp;P</td>
+<td class="ref-projects">- oblaganje protivpožarnih kanala i regala<br>cca 60.000 m2</td>
+</tr>
+<tr>
+<td class="ref-company">BASAL</td>
+<td class="ref-projects">- oblaganje protivpožarnih kanala i regala</td>
+</tr>
+<tr>
+<td class="ref-company">NECO SYSTEMS</td>
+<td class="ref-projects">- rekonstrukcija protivpožarnih instalacija</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
                 <section class="elementor-section elementor-top-section elementor-element elementor-element-28385ce elementor-section-height-min-height elementor-section-items-top elementor-hidden-desktop elementor-hidden-laptop elementor-hidden-tablet elementor-hidden-mobile elementor-section-boxed elementor-section-height-default" data-id="28385ce" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
             
                         <div class="elementor-container elementor-column-gap-default ">
