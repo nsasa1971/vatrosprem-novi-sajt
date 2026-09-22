@@ -39,3 +39,10 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .elementor-invisible {
   visibility: visible !important;
 }
+
+/* Long, all-caps hero titles (e.g. "VENTILACIJA I ODIMLJAVANJE") can wrap
+   with just one or two letters orphaned on their own line at narrow mobile
+   widths. Balance the line breaks so words redistribute evenly instead. */
+h1.custom-heading {
+  text-wrap: balance;
+}
