@@ -388,38 +388,44 @@
   <h2 class="page-title">Zahtev za usluge kontrolisanja</h2>
   <p class="page-sub">Popunite obrazac da biste zatražili kontrolisanje hidrantske mreže i/ili mobilnih uređaja i instalacija za gašenje požara. Konačnu prihvatljivost zahteva i usklađenost sa obimom akreditacije proverava kontrolno telo.</p>
 
+  <form name="zahtev-za-kontrolisanje" method="POST" data-netlify="true" netlify netlify-honeypot="bot-field" id="zahtevForm">
+    <input type="hidden" name="form-name" value="zahtev-za-kontrolisanje">
+    <p style="position:absolute;left:-9999px;" aria-hidden="true">
+      <label>Ne popunjavajte ovo polje ako ste čovek: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+    </p>
+
   <!-- 1. PODACI O KORISNIKU -->
   <div class="card">
     <h3><span class="num">1</span>Podaci o korisniku</h3>
     <div class="grid">
       <div class="field full">
         <label>Naziv korisnika / pravno lice <span class="req">*</span></label>
-        <input type="text" id="korisnikNaziv" required>
+        <input type="text" id="korisnikNaziv" name="korisnikNaziv" required>
         <div class="err">Ovo polje je obavezno.</div>
       </div>
       <div class="field">
         <label>PIB / matični broj <span class="req">*</span></label>
-        <input type="text" id="korisnikPib" required>
+        <input type="text" id="korisnikPib" name="korisnikPib" required>
         <div class="err">Ovo polje je obavezno.</div>
       </div>
       <div class="field">
         <label>Kontakt osoba <span class="req">*</span></label>
-        <input type="text" id="kontaktOsoba" required>
+        <input type="text" id="kontaktOsoba" name="kontaktOsoba" required>
         <div class="err">Ovo polje je obavezno.</div>
       </div>
       <div class="field full">
         <label>Adresa korisnika <span class="req">*</span></label>
-        <input type="text" id="korisnikAdresa" required>
+        <input type="text" id="korisnikAdresa" name="korisnikAdresa" required>
         <div class="err">Ovo polje je obavezno.</div>
       </div>
       <div class="field">
         <label>Telefon <span class="req">*</span></label>
-        <input type="tel" id="telefon" required>
+        <input type="tel" id="telefon" name="telefon" required>
         <div class="err">Ovo polje je obavezno.</div>
       </div>
       <div class="field">
         <label>E-mail <span class="req">*</span></label>
-        <input type="email" id="email" required>
+        <input type="email" id="email" name="email" required>
         <div class="err">Unesite ispravnu e-mail adresu.</div>
       </div>
     </div>
@@ -431,17 +437,17 @@
     <div class="grid">
       <div class="field full">
         <label>Naziv objekta <span class="req">*</span></label>
-        <input type="text" id="objekatNaziv" required>
+        <input type="text" id="objekatNaziv" name="objekatNaziv" required>
         <div class="err">Ovo polje je obavezno.</div>
       </div>
       <div class="field full">
         <label>Adresa objekta <span class="req">*</span></label>
-        <input type="text" id="objekatAdresa" required>
+        <input type="text" id="objekatAdresa" name="objekatAdresa" required>
         <div class="err">Ovo polje je obavezno.</div>
       </div>
       <div class="field full">
         <label>Lokacija / deo objekta</label>
-        <input type="text" id="objekatLokacija" placeholder="npr. podrum, magacin, proizvodna hala...">
+        <input type="text" id="objekatLokacija" name="objekatLokacija" placeholder="npr. podrum, magacin, proizvodna hala...">
       </div>
     </div>
   </div>
@@ -548,7 +554,7 @@
   <div class="card">
     <h3><span class="num">4</span>Saglasnost i izjava korisnika</h3>
     <label class="consent">
-      <input type="checkbox" id="consentCheck" required>
+      <input type="checkbox" id="consentCheck" name="saglasnost" value="da" required>
       <span>Slanjem ovog zahteva potvrđujem da su navedeni podaci, prema mom saznanju, tačni i potpuni i da je zahtev podnet radi dobijanja usluge kontrolisanja. Saglasan/na sam da me kontrolno telo kontaktira radi dopune ili razjašnjenja zahteva.</span>
     </label>
     <div class="err" id="consentErr">Saglasnost je obavezna za slanje zahteva.</div>
@@ -557,26 +563,29 @@
     <div class="sig-line">
       <div class="sig-field">
         <label>Datum</label>
-        <input type="date" id="datum">
+        <input type="date" id="datum" name="datum">
       </div>
       <div class="sig-field">
         <label>Podnosilac zahteva (ime i prezime)</label>
-        <input type="text" id="podnosilac" placeholder="Ime i prezime">
+        <input type="text" id="podnosilac" name="podnosilac" placeholder="Ime i prezime">
       </div>
     </div>
   </div>
 
-  <div class="actions">
-    <button id="submitBtn" disabled>Pošalji zahtev</button>
-    <button id="resetBtn" type="button">Obriši obrazac</button>
-  </div>
+    <input type="hidden" name="usluge-detalji" id="uslugeDetaljiInput">
+
+    <div class="actions">
+      <button id="submitBtn" type="button" disabled>Pošalji zahtev</button>
+      <button id="resetBtn" type="button">Obriši obrazac</button>
+    </div>
+  </form>
 </div>
 
 <div class="wrap" id="successBox">
   <div class="ok-icon">✓</div>
   <h3 id="successTitle">Zahtev je pripremljen</h3>
-  <p id="autoSentMsg" style="display:none;">Zahtev je automatski poslat na <strong>boban.inovacije@gmail.com</strong>. Konačno prihvatanje zahteva potvrđuje kontrolno telo nakon pregleda. Možete i da sačuvate PDF kopiju za svoju evidenciju.</p>
-  <p id="manualMsg" style="display:block;">Obrazac je popunjen ispravno, ali automatsko slanje trenutno nije dostupno (ovo je pregled — na pravom hostingu će raditi automatski). Sačuvajte ga kao PDF ili ga pošaljite putem e-pošte na <strong>boban.inovacije@gmail.com</strong>.</p>
+  <p id="autoSentMsg" style="display:none;">Zahtev je automatski poslat na <strong>vatrospremdoo.rs@gmail.com</strong>. Konačno prihvatanje zahteva potvrđuje kontrolno telo nakon pregleda. Možete i da sačuvate PDF kopiju za svoju evidenciju.</p>
+  <p id="manualMsg" style="display:block;">Obrazac je popunjen ispravno, ali automatsko slanje trenutno nije dostupno (ovo je pregled — na pravom hostingu će raditi automatski). Sačuvajte ga kao PDF ili ga pošaljite putem e-pošte na <strong>vatrospremdoo.rs@gmail.com</strong>.</p>
   <div class="actions">
     <button id="pdfBtn">Sačuvaj kao PDF</button>
     <button id="mailBtn" style="background:transparent;color:var(--red);border:1px solid var(--red);">Pošalji e-mailom</button>
@@ -766,58 +775,48 @@
     return d.innerHTML;
   }
 
-  var SEND_ENDPOINT = 'send-zahtev.php'; // relativna putanja — radi kada je stranica na vatrospremdoo.rs hostingu
-  var sendStatus = document.getElementById('sendStatus');
-
-  function collectPayload(){
-    var usluge = [];
+  function buildUslugeDetalji(){
+    var lines = [];
     services.forEach(function(s){
       var chk = s.querySelector('.svc-check');
       if (!chk.checked) return;
-      var q = {};
-      s.querySelectorAll('.qty').forEach(function(inp){
-        if (inp.value.trim() !== '') q[inp.dataset.key] = inp.value.trim();
-      });
-      usluge.push({ oznaka: s.getAttribute('data-code'), opis: s.querySelector('.service-text').textContent, kolicine: q });
+      var code = s.getAttribute('data-code');
+      var text = s.querySelector('.service-text').textContent;
+      var qtys = Array.from(s.querySelectorAll('.qty')).map(function(q){
+        var label = q.parentElement.querySelector('label').textContent;
+        var v = q.value.trim();
+        return v ? (label + ': ' + v) : null;
+      }).filter(Boolean).join(', ');
+      lines.push('[' + code + '] ' + text + (qtys ? ' — ' + qtys : ''));
     });
-    return {
-      korisnikNaziv: val('korisnikNaziv'),
-      korisnikPib: val('korisnikPib'),
-      korisnikAdresa: val('korisnikAdresa'),
-      kontaktOsoba: val('kontaktOsoba'),
-      telefon: val('telefon'),
-      email: val('email'),
-      objekatNaziv: val('objekatNaziv'),
-      objekatAdresa: val('objekatAdresa'),
-      objekatLokacija: val('objekatLokacija'),
-      usluge: usluge,
-      datum: dEl.value,
-      podnosilac: val('podnosilac')
-    };
+    return lines.join('\n');
   }
 
   document.getElementById('submitBtn').addEventListener('click', function(){
     if (!validate()) { showErrors(); return; }
     buildPrintView();
 
+    document.getElementById('uslugeDetaljiInput').value = buildUslugeDetalji();
+
     submitBtn.disabled = true;
     submitBtn.textContent = 'Slanje...';
 
-    fetch(SEND_ENDPOINT, {
+    var formEl = document.getElementById('zahtevForm');
+    var body = new URLSearchParams(new FormData(formEl)).toString();
+
+    fetch('/', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(collectPayload())
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: body
     }).then(function(res){
       if (!res.ok) throw new Error('server-error');
-      return res.json().catch(function(){ return {ok:true}; });
-    }).then(function(){
       document.getElementById('formArea').style.display = 'none';
       document.getElementById('successBox').style.display = 'block';
       document.getElementById('autoSentMsg').style.display = 'block';
       document.getElementById('manualMsg').style.display = 'none';
       window.scrollTo(0,0);
     }).catch(function(){
-      // Endpoint nije dostupan (npr. u pregledu ili stranica još nije na hostingu) — ručne opcije kao rezerva
+      // Netlify Forms endpoint nije dostupan (npr. lokalni pregled van Netlify hostinga) — ručne opcije kao rezerva
       document.getElementById('formArea').style.display = 'none';
       document.getElementById('successBox').style.display = 'block';
       document.getElementById('autoSentMsg').style.display = 'none';
@@ -873,7 +872,7 @@
 
     var subject = encodeURIComponent('Zahtev za usluge kontrolisanja — ' + val('korisnikNaziv'));
     var body = encodeURIComponent(lines.join('\n'));
-    window.location.href = 'mailto:boban.inovacije@gmail.com?subject=' + subject + '&body=' + body;
+    window.location.href = 'mailto:vatrospremdoo.rs@gmail.com?subject=' + subject + '&body=' + body;
   });
 
   // Pokaži greske tek nakon prvog pokušaja slanja / promene
