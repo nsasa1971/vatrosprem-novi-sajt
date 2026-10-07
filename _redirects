@@ -1,8 +1,3 @@
-http://vatrospremdoo.com/*                                https://vatrospremdoo.rs/:splat                    301!
-https://vatrospremdoo.com/*                               https://vatrospremdoo.rs/:splat                    301!
-http://www.vatrospremdoo.com/*                            https://vatrospremdoo.rs/:splat                    301!
-https://www.vatrospremdoo.com/*                           https://vatrospremdoo.rs/:splat                    301!
-
 /protivpozarni-aparati                                   /service/pp-aparati-i-hidrantska-oprema/           301
 /protivpozarni-ormani-i-delovi                            /service/pp-aparati-i-hidrantska-oprema/           301
 /sistemi-sprinkler                                        /splinker-sistemi/                                 301
@@ -43,3 +38,14 @@ https://www.vatrospremdoo.com/*                           https://vatrospremdoo.
 /Novisajt/kontakt/                                        /kontakt/                                           301
 /Novisajt/moji-blogovi/                                   /aktuelnosti/                                       301
 /Novisajt/*                                               /                                                   301
+
+/project-masonry/                                       /reference/                                         301
+/project-masonry                                        /reference/                                         301
+/blog-masonry/                                          /aktuelnosti/                                       301
+/blog-masonry                                           /aktuelnosti/                                       301
+
+# Domain-wide .com -> .rs fallback (must stay last so specific rules match first)
+http://vatrospremdoo.com/*                                https://vatrospremdoo.rs/:splat                    301!
+https://vatrospremdoo.com/*                               https://vatrospremdoo.rs/:splat                    301!
+http://www.vatrospremdoo.com/*                            https://vatrospremdoo.rs/:splat                    301!
+https://www.vatrospremdoo.com/*                           https://vatrospremdoo.rs/:splat                    301!
