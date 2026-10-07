@@ -39,6 +39,11 @@
 /Novisajt/moji-blogovi/                                   /aktuelnosti/                                       301
 /Novisajt/*                                               /                                                   301
 
+/project-masonry/                                       /reference/                                         301
+/project-masonry                                        /reference/                                         301
+/blog-masonry/                                          /aktuelnosti/                                       301
+/blog-masonry                                           /aktuelnosti/                                       301
+
 # Domain-wide .com -> .rs fallback (must stay last so specific rules match first)
 http://vatrospremdoo.com/*                                https://vatrospremdoo.rs/:splat                    301!
 https://vatrospremdoo.com/*                               https://vatrospremdoo.rs/:splat                    301!
